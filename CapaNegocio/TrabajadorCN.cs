@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 using CapaDatos;
 using CapaEntidad;
 
-namespace capaNegocios
+namespace CapaNegocio
 {
-    public class TrabajadorNE
+    public class TrabajadorCN
     {
         TrabajadorCD objdato = new TrabajadorCD();
 

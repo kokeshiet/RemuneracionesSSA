@@ -60,6 +60,12 @@
     <Compile Include="frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrabajador.Designer.cs">
+      <DependentUpon>frmTrabajador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmInicioSesion.resx">
@@ -67,6 +73,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrabajador.resx">
+      <DependentUpon>frmTrabajador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,6 +107,10 @@
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
       <Project>{e828e516-4f94-4cf7-b6a1-119a4a6f8e19}</Project>
       <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{ba48af26-3177-47bd-a8b1-106a0516bbac}</Project>
+      <Name>CapaEntidad</Name>
     </ProjectReference>
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
       <Project>{d8b8c2dc-ef1f-4b46-81ce-15243e0a7418}</Project>
