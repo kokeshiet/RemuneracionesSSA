@@ -16,5 +16,13 @@ namespace RemuneracionesSSA
         {
             InitializeComponent();
         }
+
+        private void trabajadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTrabajador trabajador = new frmTrabajador();
+            trabajador.MdiParent = this;
+            trabajador.StartPosition = FormStartPosition.CenterParent;
+            trabajador.Show();
+        }
     }
 }

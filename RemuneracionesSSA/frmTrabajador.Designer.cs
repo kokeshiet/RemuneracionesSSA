@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtAPaterno = new System.Windows.Forms.TextBox();
-            this.txtAMaterno = new System.Windows.Forms.TextBox();
-            this.txtRut = new System.Windows.Forms.TextBox();
             this.txtDV = new System.Windows.Forms.TextBox();
+            this.txtRut = new System.Windows.Forms.TextBox();
+            this.txtAMaterno = new System.Windows.Forms.TextBox();
+            this.txtAPaterno = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.dgvTrabajador = new System.Windows.Forms.DataGridView();
@@ -71,50 +71,48 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Trabajador";
             // 
-            // label1
+            // txtDV
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
+            this.txtDV.Location = new System.Drawing.Point(220, 131);
+            this.txtDV.Name = "txtDV";
+            this.txtDV.Size = new System.Drawing.Size(22, 20);
+            this.txtDV.TabIndex = 11;
             // 
-            // label2
+            // txtRut
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre";
+            this.txtRut.Location = new System.Drawing.Point(98, 131);
+            this.txtRut.Name = "txtRut";
+            this.txtRut.Size = new System.Drawing.Size(100, 20);
+            this.txtRut.TabIndex = 10;
             // 
-            // label3
+            // txtAMaterno
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Apellido Paterno";
+            this.txtAMaterno.Location = new System.Drawing.Point(98, 105);
+            this.txtAMaterno.Name = "txtAMaterno";
+            this.txtAMaterno.Size = new System.Drawing.Size(100, 20);
+            this.txtAMaterno.TabIndex = 9;
             // 
-            // label4
+            // txtAPaterno
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Apellido Materno";
+            this.txtAPaterno.Location = new System.Drawing.Point(98, 79);
+            this.txtAPaterno.Name = "txtAPaterno";
+            this.txtAPaterno.Size = new System.Drawing.Size(100, 20);
+            this.txtAPaterno.TabIndex = 8;
             // 
-            // label5
+            // txtNombre
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 134);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Rut";
+            this.txtNombre.Location = new System.Drawing.Point(98, 53);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 7;
+            // 
+            // txtID
+            // 
+            this.txtID.Enabled = false;
+            this.txtID.Location = new System.Drawing.Point(98, 27);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(31, 20);
+            this.txtID.TabIndex = 6;
             // 
             // label6
             // 
@@ -125,48 +123,50 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "-";
             // 
-            // txtID
+            // label5
             // 
-            this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(98, 27);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(31, 20);
-            this.txtID.TabIndex = 6;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 134);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(24, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Rut";
             // 
-            // txtNombre
+            // label4
             // 
-            this.txtNombre.Location = new System.Drawing.Point(98, 53);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Apellido Materno";
             // 
-            // txtAPaterno
+            // label3
             // 
-            this.txtAPaterno.Location = new System.Drawing.Point(98, 79);
-            this.txtAPaterno.Name = "txtAPaterno";
-            this.txtAPaterno.Size = new System.Drawing.Size(100, 20);
-            this.txtAPaterno.TabIndex = 8;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 82);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Apellido Paterno";
             // 
-            // txtAMaterno
+            // label2
             // 
-            this.txtAMaterno.Location = new System.Drawing.Point(98, 105);
-            this.txtAMaterno.Name = "txtAMaterno";
-            this.txtAMaterno.Size = new System.Drawing.Size(100, 20);
-            this.txtAMaterno.TabIndex = 9;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nombre";
             // 
-            // txtRut
+            // label1
             // 
-            this.txtRut.Location = new System.Drawing.Point(98, 131);
-            this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(100, 20);
-            this.txtRut.TabIndex = 10;
-            // 
-            // txtDV
-            // 
-            this.txtDV.Location = new System.Drawing.Point(220, 131);
-            this.txtDV.Name = "txtDV";
-            this.txtDV.Size = new System.Drawing.Size(22, 20);
-            this.txtDV.TabIndex = 11;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ID";
             // 
             // btnAgregar
             // 
