@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class Trabajador
+    public class TrabajadorCE
     {
         public int id { get; set; }
         public string nombre { get; set; }
