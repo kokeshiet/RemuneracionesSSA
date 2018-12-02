@@ -44,12 +44,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dtFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.btnAsignar = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtValorDia = new System.Windows.Forms.TextBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnAsignar);
+            this.groupBox1.Controls.Add(this.txtValorDia);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.dtFechaInicio);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.cbObra);
@@ -192,19 +196,47 @@
             // 
             // btnAsignar
             // 
-            this.btnAsignar.Location = new System.Drawing.Point(331, 94);
+            this.btnAsignar.Location = new System.Drawing.Point(151, 144);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Size = new System.Drawing.Size(75, 23);
             this.btnAsignar.TabIndex = 14;
             this.btnAsignar.Text = "Asignar";
             this.btnAsignar.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(260, 74);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Valor Día";
+            // 
+            // txtValorDia
+            // 
+            this.txtValorDia.Location = new System.Drawing.Point(331, 71);
+            this.txtValorDia.Name = "txtValorDia";
+            this.txtValorDia.Size = new System.Drawing.Size(100, 20);
+            this.txtValorDia.TabIndex = 16;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(310, 144);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 15;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmAsignarObra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 145);
+            this.ClientSize = new System.Drawing.Size(547, 175);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnAsignar);
             this.Name = "frmAsignarObra";
             this.Text = "...::: Asignar Obra :::...";
             this.Load += new System.EventHandler(this.frmAsignarObra_Load);
@@ -232,5 +264,8 @@
         private System.Windows.Forms.ComboBox cbObra;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnAsignar;
+        private System.Windows.Forms.TextBox txtValorDia;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

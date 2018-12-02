@@ -54,5 +54,22 @@ namespace RemuneracionesSSA
                 }
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        void Limpiar()
+        {
+            txtRut.Text = "";
+            txtDV.Text = "";
+            txtNombre.Text = "";
+            txtApaterno.Text = "";
+            txtAmaterno.Text = "";
+            cbObra.SelectedIndex = 0;
+            txtValorDia.Text = "";
+            dtFechaInicio.Value = DateTime.Now;
+        }
     }
 }
