@@ -17,6 +17,7 @@ namespace RemuneracionesSSA
         public frmObra()
         {
             InitializeComponent();
+            ListarObra();
         }
 
         ObraCE objEntidad = new ObraCE();
