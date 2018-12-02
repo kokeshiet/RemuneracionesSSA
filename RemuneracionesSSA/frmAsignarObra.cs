@@ -23,6 +23,8 @@ namespace RemuneracionesSSA
         TrabajadorCN objNegoTrabajador = new TrabajadorCN();
         ObraCE objEntidadObra = new ObraCE();
         ObraCN objNegoObra = new ObraCN();
+        ObraAsignadaCE objEntidadObraAsig = new ObraAsignadaCE();
+        ObraAsignadaCN objNegoObraAsig = new ObraAsignadaCN();
 
         private void frmAsignarObra_Load(object sender, EventArgs e)
         {
@@ -70,6 +72,31 @@ namespace RemuneracionesSSA
             cbObra.SelectedIndex = 0;
             txtValorDia.Text = "";
             dtFechaInicio.Value = DateTime.Now;
+        }
+
+        private void btnAsignar_Click(object sender, EventArgs e)
+        {
+            Insertar();
+            Limpiar();
+        }
+
+        void Insertar()
+        {
+            if (txtRut.Text.Length == 0 || txtNombre.Text.Length == 0 || txtApaterno.Text.Length == 0 || txtAmaterno.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar todos los datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                objEntidadObraAsig.rut = Convert.ToInt32(txtRut.Text);
+                objEntidadObraAsig.idobra = Convert.ToInt32(cbObra.SelectedValue);
+                objEntidadObraAsig.fechainicio = dtFechaInicio.Value;
+                objEntidadObraAsig.valordia = Convert.ToInt32(txtValorDia.Text);
+
+                objNegoObraAsig.n_insertar(objEntidadObraAsig);
+
+                MessageBox.Show("Trabajador registrado con éxito", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

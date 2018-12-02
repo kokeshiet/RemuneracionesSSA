@@ -202,6 +202,7 @@
             this.btnAsignar.TabIndex = 14;
             this.btnAsignar.Text = "Asignar";
             this.btnAsignar.UseVisualStyleBackColor = true;
+            this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
             // 
             // label8
             // 

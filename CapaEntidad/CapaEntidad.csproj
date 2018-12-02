@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ObraAsignadaCE.cs" />
     <Compile Include="ObraCE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sqlCE.cs" />

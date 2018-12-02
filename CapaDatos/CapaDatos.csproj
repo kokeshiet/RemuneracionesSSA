@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ObraAsignadaCD.cs" />
     <Compile Include="ObraCD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrabajadorCD.cs" />
