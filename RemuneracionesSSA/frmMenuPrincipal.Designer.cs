@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mantenedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trabajadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.obrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             // mantenedoresToolStripMenuItem
             // 
             this.mantenedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trabajadoresToolStripMenuItem});
+            this.trabajadoresToolStripMenuItem,
+            this.obrasToolStripMenuItem});
             this.mantenedoresToolStripMenuItem.Name = "mantenedoresToolStripMenuItem";
             this.mantenedoresToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.mantenedoresToolStripMenuItem.Text = "Mantenedores";
@@ -58,6 +60,13 @@
             this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.trabajadoresToolStripMenuItem.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem_Click);
+            // 
+            // obrasToolStripMenuItem
+            // 
+            this.obrasToolStripMenuItem.Name = "obrasToolStripMenuItem";
+            this.obrasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.obrasToolStripMenuItem.Text = "Obras";
+            this.obrasToolStripMenuItem.Click += new System.EventHandler(this.obrasToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -82,5 +91,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mantenedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trabajadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem obrasToolStripMenuItem;
     }
 }

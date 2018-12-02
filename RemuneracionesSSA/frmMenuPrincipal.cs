@@ -24,5 +24,13 @@ namespace RemuneracionesSSA
             trabajador.StartPosition = FormStartPosition.CenterParent;
             trabajador.Show();
         }
+
+        private void obrasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmObra obra = new frmObra();
+            obra.MdiParent = this;
+            obra.StartPosition = FormStartPosition.CenterParent;
+            obra.Show();
+        }
     }
 }
