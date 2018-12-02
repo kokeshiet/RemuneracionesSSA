@@ -40,6 +40,8 @@
             this.btnTrabajador = new System.Windows.Forms.ToolStripButton();
             this.btnObra = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.asignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +50,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mantenedoresToolStripMenuItem,
-            this.listadosToolStripMenuItem});
+            this.listadosToolStripMenuItem,
+            this.asignacionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -152,6 +155,21 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 86);
             // 
+            // asignacionesToolStripMenuItem
+            // 
+            this.asignacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.asignarObraToolStripMenuItem});
+            this.asignacionesToolStripMenuItem.Name = "asignacionesToolStripMenuItem";
+            this.asignacionesToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
+            this.asignacionesToolStripMenuItem.Text = "Asignaciones";
+            // 
+            // asignarObraToolStripMenuItem
+            // 
+            this.asignarObraToolStripMenuItem.Name = "asignarObraToolStripMenuItem";
+            this.asignarObraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.asignarObraToolStripMenuItem.Text = "Asignar Obra";
+            this.asignarObraToolStripMenuItem.Click += new System.EventHandler(this.asignarObraToolStripMenuItem_Click);
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,5 +206,7 @@
         private System.Windows.Forms.ToolStripButton btnTrabajador;
         private System.Windows.Forms.ToolStripButton btnObra;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem asignacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asignarObraToolStripMenuItem;
     }
 }

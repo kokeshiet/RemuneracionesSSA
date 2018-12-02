@@ -19,13 +19,15 @@ namespace RemuneracionesSSA
             InitializeComponent();
         }
 
-        TrabajadorCE objEntidad = new TrabajadorCE();
-        TrabajadorCN objNego = new TrabajadorCN();
+        TrabajadorCE objEntidadTrabajador = new TrabajadorCE();
+        TrabajadorCN objNegoTrabajador = new TrabajadorCN();
+        ObraCE objEntidadObra = new ObraCE();
+        ObraCN objNegoObra = new ObraCN();
 
         private void frmAsignarObra_Load(object sender, EventArgs e)
         {
             DataTable dtDoctores = new DataTable();
-            dtDoctores = objNego.n_listado();
+            dtDoctores = objNegoObra.n_listado();
             DataRow rowDoctores;
             rowDoctores = dtDoctores.NewRow();
             rowDoctores[0] = "0";
@@ -43,7 +45,7 @@ namespace RemuneracionesSSA
             if (txtRut.Text.Length > 0)
             {
                 txtDV.Text = CapaDatos.Util.calculaDV(Convert.ToInt32(txtRut.Text));
-                DataTable dt = objNego.n_listadoXrut(Convert.ToInt32(txtRut.Text));
+                DataTable dt = objNegoTrabajador.n_listadoXrut(Convert.ToInt32(txtRut.Text));
                 if (dt.Rows.Count > 0)
                 {
                     txtNombre.Text = dt.Rows[0][0].ToString();
