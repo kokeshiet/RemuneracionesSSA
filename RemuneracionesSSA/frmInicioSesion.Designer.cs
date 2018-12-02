@@ -104,8 +104,10 @@
             // 
             // frmInicioSesion
             // 
+            this.AcceptButton = this.btnIngresar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(308, 221);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIngresar);
