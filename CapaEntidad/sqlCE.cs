@@ -49,7 +49,7 @@ namespace capaEntidad
             }
         }
 
-        ~sqlE()
+        ~sqlCE()
         {
             this.Desconectar();
         }

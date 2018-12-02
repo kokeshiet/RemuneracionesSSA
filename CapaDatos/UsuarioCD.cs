@@ -14,7 +14,7 @@ namespace CapaDatos
             DataSet dtsRetorno = new DataSet();
             try
             {
-                CapaEntidad.sqlCE sql = new CapaEntidad, sqlCE();
+                capaEntidad.sqlCE sql = new capaEntidad.sqlCE();
                 sql.addParametro("@login", user);
                 sql.addParametro("@password", pass);
                 dtsRetorno = sql.querySPDataset("SVC_QRY_CONSULTALOGIN");
