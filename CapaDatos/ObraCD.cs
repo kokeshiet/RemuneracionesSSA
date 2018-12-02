@@ -12,7 +12,7 @@ namespace CapaDatos
 {
     public class ObraCD
     {
-        SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["conexionSQLServer"].ConnectionString);
+        SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconex"].ConnectionString);
 
         public DataTable d_listado()
         {
