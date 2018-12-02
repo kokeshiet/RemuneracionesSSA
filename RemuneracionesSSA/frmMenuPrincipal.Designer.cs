@@ -34,14 +34,12 @@
             this.obrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trabajadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.todosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porRutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obrasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.btnTrabajador = new System.Windows.Forms.ToolStripButton();
             this.btnObra = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -91,29 +89,15 @@
             // 
             // trabajadoresToolStripMenuItem1
             // 
-            this.trabajadoresToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.todosToolStripMenuItem,
-            this.porRutToolStripMenuItem});
             this.trabajadoresToolStripMenuItem1.Name = "trabajadoresToolStripMenuItem1";
-            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.trabajadoresToolStripMenuItem1.Text = "Trabajadores";
-            // 
-            // todosToolStripMenuItem
-            // 
-            this.todosToolStripMenuItem.Name = "todosToolStripMenuItem";
-            this.todosToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.todosToolStripMenuItem.Text = "Todos";
-            // 
-            // porRutToolStripMenuItem
-            // 
-            this.porRutToolStripMenuItem.Name = "porRutToolStripMenuItem";
-            this.porRutToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.porRutToolStripMenuItem.Text = "Por Rut";
+            this.trabajadoresToolStripMenuItem1.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem1_Click);
             // 
             // obrasToolStripMenuItem1
             // 
             this.obrasToolStripMenuItem1.Name = "obrasToolStripMenuItem1";
-            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.obrasToolStripMenuItem1.Text = "Obras";
             // 
             // toolStrip1
@@ -128,11 +112,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(800, 86);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 86);
             // 
             // btnSalir
             // 
@@ -168,6 +147,11 @@
             this.btnObra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnObra.Click += new System.EventHandler(this.btnObra_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 86);
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,8 +182,6 @@
         private System.Windows.Forms.ToolStripMenuItem obrasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trabajadoresToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem todosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porRutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem obrasToolStripMenuItem1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnSalir;

@@ -138,5 +138,10 @@ namespace RemuneracionesSSA
                 txtDV.Text = CapaDatos.Util.calculaDV(Convert.ToInt32(txtRut.Text));
             }
         }
+
+        private void frmTrabajador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -229,6 +229,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmTrabajador";
             this.Text = "...::: Mantenedor Trabajador :::...";
+            this.Load += new System.EventHandler(this.frmTrabajador_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrabajador)).EndInit();

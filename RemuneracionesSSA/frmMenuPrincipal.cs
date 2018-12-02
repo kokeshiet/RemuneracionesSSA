@@ -47,5 +47,13 @@ namespace RemuneracionesSSA
         {
             obrasToolStripMenuItem_Click(sender, e);
         }
+
+        private void trabajadoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmListadoTrabajador listadoTrabajador = new frmListadoTrabajador();
+            listadoTrabajador.MdiParent = this;
+            listadoTrabajador.StartPosition = FormStartPosition.CenterParent;
+            listadoTrabajador.Show();
+        }
     }
 }
