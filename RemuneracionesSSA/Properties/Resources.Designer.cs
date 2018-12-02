@@ -63,9 +63,39 @@ namespace RemuneracionesSSA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("exit_64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogoNovaConstructora {
             get {
                 object obj = ResourceManager.GetObject("LogoNovaConstructora", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Obra_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("Obra_64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Trabajado_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("Trabajado_64x64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

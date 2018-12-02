@@ -32,13 +32,25 @@
             this.mantenedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trabajadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trabajadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.todosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.porRutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.obrasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnSalir = new System.Windows.Forms.ToolStripButton();
+            this.btnTrabajador = new System.Windows.Forms.ToolStripButton();
+            this.btnObra = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mantenedoresToolStripMenuItem});
+            this.mantenedoresToolStripMenuItem,
+            this.listadosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -57,22 +69,112 @@
             // trabajadoresToolStripMenuItem
             // 
             this.trabajadoresToolStripMenuItem.Name = "trabajadoresToolStripMenuItem";
-            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.trabajadoresToolStripMenuItem.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem_Click);
             // 
             // obrasToolStripMenuItem
             // 
             this.obrasToolStripMenuItem.Name = "obrasToolStripMenuItem";
-            this.obrasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.obrasToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.obrasToolStripMenuItem.Text = "Obras";
             this.obrasToolStripMenuItem.Click += new System.EventHandler(this.obrasToolStripMenuItem_Click);
+            // 
+            // listadosToolStripMenuItem
+            // 
+            this.listadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trabajadoresToolStripMenuItem1,
+            this.obrasToolStripMenuItem1});
+            this.listadosToolStripMenuItem.Name = "listadosToolStripMenuItem";
+            this.listadosToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.listadosToolStripMenuItem.Text = "Listados";
+            // 
+            // trabajadoresToolStripMenuItem1
+            // 
+            this.trabajadoresToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.todosToolStripMenuItem,
+            this.porRutToolStripMenuItem});
+            this.trabajadoresToolStripMenuItem1.Name = "trabajadoresToolStripMenuItem1";
+            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.trabajadoresToolStripMenuItem1.Text = "Trabajadores";
+            // 
+            // todosToolStripMenuItem
+            // 
+            this.todosToolStripMenuItem.Name = "todosToolStripMenuItem";
+            this.todosToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.todosToolStripMenuItem.Text = "Todos";
+            // 
+            // porRutToolStripMenuItem
+            // 
+            this.porRutToolStripMenuItem.Name = "porRutToolStripMenuItem";
+            this.porRutToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.porRutToolStripMenuItem.Text = "Por Rut";
+            // 
+            // obrasToolStripMenuItem1
+            // 
+            this.obrasToolStripMenuItem1.Name = "obrasToolStripMenuItem1";
+            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.obrasToolStripMenuItem1.Text = "Obras";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnSalir,
+            this.btnTrabajador,
+            this.btnObra,
+            this.toolStripSeparator1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 86);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 86);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnSalir.Image = global::RemuneracionesSSA.Properties.Resources.exit_64x64;
+            this.btnSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(68, 83);
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnTrabajador
+            // 
+            this.btnTrabajador.Image = global::RemuneracionesSSA.Properties.Resources.Trabajado_64x64;
+            this.btnTrabajador.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnTrabajador.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTrabajador.Name = "btnTrabajador";
+            this.btnTrabajador.Size = new System.Drawing.Size(68, 83);
+            this.btnTrabajador.Text = "Trabajador";
+            this.btnTrabajador.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTrabajador.Click += new System.EventHandler(this.btnTrabajador_Click);
+            // 
+            // btnObra
+            // 
+            this.btnObra.Image = global::RemuneracionesSSA.Properties.Resources.Obra_64x64;
+            this.btnObra.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnObra.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnObra.Name = "btnObra";
+            this.btnObra.Size = new System.Drawing.Size(68, 83);
+            this.btnObra.Text = "Obra";
+            this.btnObra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnObra.Click += new System.EventHandler(this.btnObra_Click);
             // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -81,6 +183,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,5 +196,15 @@
         private System.Windows.Forms.ToolStripMenuItem mantenedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trabajadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem obrasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trabajadoresToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem todosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem porRutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem obrasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnSalir;
+        private System.Windows.Forms.ToolStripButton btnTrabajador;
+        private System.Windows.Forms.ToolStripButton btnObra;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

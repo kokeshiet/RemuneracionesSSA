@@ -32,5 +32,20 @@ namespace RemuneracionesSSA
             obra.StartPosition = FormStartPosition.CenterParent;
             obra.Show();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnTrabajador_Click(object sender, EventArgs e)
+        {
+            trabajadoresToolStripMenuItem_Click(sender, e);
+        }
+
+        private void btnObra_Click(object sender, EventArgs e)
+        {
+            obrasToolStripMenuItem_Click(sender, e);
+        }
     }
 }
