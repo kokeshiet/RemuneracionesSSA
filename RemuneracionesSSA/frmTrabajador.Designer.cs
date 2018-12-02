@@ -30,15 +30,15 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtDV = new System.Windows.Forms.TextBox();
-            this.txtRut = new System.Windows.Forms.TextBox();
             this.txtAMaterno = new System.Windows.Forms.TextBox();
             this.txtAPaterno = new System.Windows.Forms.TextBox();
+            this.txtRut = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -53,15 +53,15 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtDV);
-            this.groupBox1.Controls.Add(this.txtRut);
             this.groupBox1.Controls.Add(this.txtAMaterno);
             this.groupBox1.Controls.Add(this.txtAPaterno);
+            this.groupBox1.Controls.Add(this.txtRut);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.txtID);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -73,38 +73,41 @@
             // 
             // txtDV
             // 
-            this.txtDV.Location = new System.Drawing.Point(220, 131);
+            this.txtDV.Enabled = false;
+            this.txtDV.Location = new System.Drawing.Point(220, 53);
             this.txtDV.Name = "txtDV";
             this.txtDV.Size = new System.Drawing.Size(22, 20);
-            this.txtDV.TabIndex = 11;
-            // 
-            // txtRut
-            // 
-            this.txtRut.Location = new System.Drawing.Point(98, 131);
-            this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(100, 20);
-            this.txtRut.TabIndex = 10;
+            this.txtDV.TabIndex = 9;
             // 
             // txtAMaterno
             // 
-            this.txtAMaterno.Location = new System.Drawing.Point(98, 105);
+            this.txtAMaterno.Location = new System.Drawing.Point(98, 131);
             this.txtAMaterno.Name = "txtAMaterno";
-            this.txtAMaterno.Size = new System.Drawing.Size(100, 20);
-            this.txtAMaterno.TabIndex = 9;
+            this.txtAMaterno.Size = new System.Drawing.Size(144, 20);
+            this.txtAMaterno.TabIndex = 12;
             // 
             // txtAPaterno
             // 
-            this.txtAPaterno.Location = new System.Drawing.Point(98, 79);
+            this.txtAPaterno.Location = new System.Drawing.Point(98, 105);
             this.txtAPaterno.Name = "txtAPaterno";
-            this.txtAPaterno.Size = new System.Drawing.Size(100, 20);
-            this.txtAPaterno.TabIndex = 8;
+            this.txtAPaterno.Size = new System.Drawing.Size(144, 20);
+            this.txtAPaterno.TabIndex = 11;
+            // 
+            // txtRut
+            // 
+            this.txtRut.Location = new System.Drawing.Point(98, 53);
+            this.txtRut.MaxLength = 8;
+            this.txtRut.Name = "txtRut";
+            this.txtRut.Size = new System.Drawing.Size(100, 20);
+            this.txtRut.TabIndex = 7;
+            this.txtRut.TextChanged += new System.EventHandler(this.txtRut_TextChanged);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(98, 53);
+            this.txtNombre.Location = new System.Drawing.Point(98, 79);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.Size = new System.Drawing.Size(144, 20);
+            this.txtNombre.TabIndex = 10;
             // 
             // txtID
             // 
@@ -114,49 +117,49 @@
             this.txtID.Size = new System.Drawing.Size(31, 20);
             this.txtID.TabIndex = 6;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(204, 134);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(10, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "-";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 134);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Rut";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 108);
+            this.label4.Location = new System.Drawing.Point(6, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 5;
             this.label4.Text = "Apellido Materno";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 82);
+            this.label3.Location = new System.Drawing.Point(6, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 13);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 4;
             this.label3.Text = "Apellido Paterno";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 56);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(24, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Rut";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(204, 56);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(10, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "-";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 56);
+            this.label2.Location = new System.Drawing.Point(6, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 3;
             this.label2.Text = "Nombre";
             // 
             // label1

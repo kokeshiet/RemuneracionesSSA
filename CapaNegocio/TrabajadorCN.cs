@@ -18,6 +18,10 @@ namespace CapaNegocio
         {
             return objdato.d_listado();
         }
+        public DataTable n_listadoXrut(int rut)
+        {
+            return objdato.d_listadoXrut(rut);
+        }
 
         public void n_insertar(TrabajadorCE emp)
         {

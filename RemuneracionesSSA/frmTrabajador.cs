@@ -114,5 +114,13 @@ namespace RemuneracionesSSA
             ListarEmpleado();
             Limpiar();
         }
+
+        private void txtRut_TextChanged(object sender, EventArgs e)
+        {
+            if (txtRut.Text.Length > 0)
+            {
+                txtDV.Text = CapaDatos.Util.calculaDV(Convert.ToInt32(txtRut.Text));
+            }
+        }
     }
 }

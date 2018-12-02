@@ -24,6 +24,17 @@ namespace CapaDatos
             return dt;
         }
 
+        public DataTable d_listadoXrut(int rut)
+        {
+            SqlCommand cmd = new SqlCommand("SP_LISTAR_POR_RUT", cn);
+            cmd.Parameters.AddWithValue("@RUT", rut);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
         public void d_insertar(TrabajadorCE emp)
         {
             SqlCommand cmd = new SqlCommand("SVC_INS_INSERTAR_EMPLEADO", cn);
@@ -72,8 +83,6 @@ namespace CapaDatos
                 cmd.ExecuteNonQuery();
                 cn.Close();
             }
-
-
         }
     }
 }
