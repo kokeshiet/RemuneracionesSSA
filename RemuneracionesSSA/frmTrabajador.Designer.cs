@@ -186,6 +186,7 @@
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // dgvTrabajador
             // 
@@ -200,6 +201,7 @@
             this.dgvTrabajador.Name = "dgvTrabajador";
             this.dgvTrabajador.Size = new System.Drawing.Size(565, 118);
             this.dgvTrabajador.TabIndex = 3;
+            this.dgvTrabajador.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTrabajador_CellContentClick);
             // 
             // Eliminar
             // 

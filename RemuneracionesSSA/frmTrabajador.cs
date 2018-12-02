@@ -17,6 +17,7 @@ namespace RemuneracionesSSA
         public frmTrabajador()
         {
             InitializeComponent();
+            ListarEmpleado();
         }
 
         private void AgregarTrabajador_Load(object sender, EventArgs e)
@@ -61,27 +62,7 @@ namespace RemuneracionesSSA
             txtRut.Text = "";
             txtDV.Text = "";
         }
-
-        private void dgvTrabajador_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvTrabajador.Rows[e.RowIndex].Cells["Eliminar"].Selected)
-            {
-                int eliminar = Convert.ToInt32(dgvTrabajador.Rows[e.RowIndex].Cells["id_trabajador"].Value.ToString());
-                objNego.n_eliminar(eliminar);
-                ListarEmpleado();
-            }
-
-            if (dgvTrabajador.Rows[e.RowIndex].Cells["Modificar"].Selected)
-            {
-                txtID.Text = dgvTrabajador.Rows[e.RowIndex].Cells["id_trabajador"].Value.ToString();
-                txtNombre.Text = dgvTrabajador.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
-                txtAPaterno.Text = dgvTrabajador.Rows[e.RowIndex].Cells["apaterno"].Value.ToString();
-                txtAMaterno.Text = dgvTrabajador.Rows[e.RowIndex].Cells["amaterno"].Value.ToString();
-                txtRut.Text = dgvTrabajador.Rows[e.RowIndex].Cells["rut"].Value.ToString();
-                txtDV.Text = dgvTrabajador.Rows[e.RowIndex].Cells["dv"].Value.ToString();
-            }
-        }
-
+        
         private void btnEditar_Click(object sender, EventArgs e)
         {
             Editar();
@@ -105,6 +86,33 @@ namespace RemuneracionesSSA
             int eliminar = Convert.ToInt32(txtID);
             objNego.n_eliminar(eliminar);
             ListarEmpleado();
+        }
+
+        private void dgvTrabajador_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvTrabajador.Rows[e.RowIndex].Cells["Eliminar"].Selected)
+            {
+                int eliminar = Convert.ToInt32(dgvTrabajador.Rows[e.RowIndex].Cells["id_trabajador"].Value.ToString());
+                objNego.n_eliminar(eliminar);
+                ListarEmpleado();
+            }
+
+            if (dgvTrabajador.Rows[e.RowIndex].Cells["Modificar"].Selected)
+            {
+                txtID.Text = dgvTrabajador.Rows[e.RowIndex].Cells["id_trabajador"].Value.ToString();
+                txtNombre.Text = dgvTrabajador.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+                txtAPaterno.Text = dgvTrabajador.Rows[e.RowIndex].Cells["apaterno"].Value.ToString();
+                txtAMaterno.Text = dgvTrabajador.Rows[e.RowIndex].Cells["amaterno"].Value.ToString();
+                txtRut.Text = dgvTrabajador.Rows[e.RowIndex].Cells["rut"].Value.ToString();
+                txtDV.Text = dgvTrabajador.Rows[e.RowIndex].Cells["dv"].Value.ToString();
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Editar();
+            ListarEmpleado();
+            Limpiar();
         }
     }
 }
