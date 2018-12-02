@@ -32,5 +32,10 @@ namespace RemuneracionesSSA
                 MessageBox.Show("Usuario y/o Contraseña incorrecta, intente nuevamente");
             }
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
