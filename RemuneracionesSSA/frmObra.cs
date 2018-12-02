@@ -46,8 +46,9 @@ namespace RemuneracionesSSA
                 ListarObra();
             }
 
-            if (dgvObra.Rows[e.RowIndex].Cells["Editar"].Selected)
+            if (dgvObra.Rows[e.RowIndex].Cells["Modificar"].Selected)
             {
+                btnAgregar.Enabled = false;
                 txtID.Text = dgvObra.Rows[e.RowIndex].Cells["id_obra"].Value.ToString();
                 txtNombre.Text = dgvObra.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
                 txtDetalle.Text = dgvObra.Rows[e.RowIndex].Cells["detalle"].Value.ToString();
@@ -56,13 +57,19 @@ namespace RemuneracionesSSA
         }
         void Insertar()
         {
-            objEntidad.nombre = txtNombre.Text;
-            objEntidad.detalle = txtDetalle.Text;
+            if (txtNombre.Text.Length == 0 || txtDetalle.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar todos los datos de la Obra", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                objEntidad.nombre = txtNombre.Text;
+                objEntidad.detalle = txtDetalle.Text;
 
+                objNego.n_insertar(objEntidad);
 
-            objNego.n_insertar(objEntidad);
-
-            MessageBox.Show("Registro insertado con éxito");
+                MessageBox.Show("Registro insertado con éxito");
+            }
         }
 
         void Limpiar()
@@ -78,16 +85,24 @@ namespace RemuneracionesSSA
             Editar();
             ListarObra();
             Limpiar();
+            btnAgregar.Enabled = true;
         }
         void Editar()
         {
-            objEntidad.id = Convert.ToInt32(txtID.Text);
-            objEntidad.nombre = txtNombre.Text;
-            objEntidad.detalle = txtDetalle.Text;
+            try
+            {
+                objEntidad.id = Convert.ToInt32(txtID.Text);
+                objEntidad.nombre = txtNombre.Text;
+                objEntidad.detalle = txtDetalle.Text;
 
-            objNego.n_editar(objEntidad);
+                objNego.n_editar(objEntidad);
 
-            MessageBox.Show("Registro editado con éxito");
+                MessageBox.Show("Registro editado con éxito");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Debe seleccionar una Obra", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
     }
 }

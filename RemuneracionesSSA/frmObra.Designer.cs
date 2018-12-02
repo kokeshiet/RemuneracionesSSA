@@ -39,7 +39,7 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.dgvObra = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Modificar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modificar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvObra)).BeginInit();
             this.SuspendLayout();
@@ -142,7 +142,7 @@
             this.Modificar});
             this.dgvObra.Location = new System.Drawing.Point(12, 142);
             this.dgvObra.Name = "dgvObra";
-            this.dgvObra.Size = new System.Drawing.Size(404, 89);
+            this.dgvObra.Size = new System.Drawing.Size(520, 89);
             this.dgvObra.TabIndex = 3;
             this.dgvObra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvObra_CellContentClick);
             // 
@@ -156,13 +156,15 @@
             // 
             this.Modificar.HeaderText = "Modificar";
             this.Modificar.Name = "Modificar";
+            this.Modificar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Modificar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Modificar.Width = 75;
             // 
             // frmObra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 240);
+            this.ClientSize = new System.Drawing.Size(544, 240);
             this.Controls.Add(this.dgvObra);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -189,6 +191,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.DataGridView dgvObra;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Modificar;
+        private System.Windows.Forms.DataGridViewButtonColumn Modificar;
     }
 }

@@ -43,15 +43,22 @@ namespace RemuneracionesSSA
 
         void Insertar()
         {
-            objEntidad.nombre = txtNombre.Text;
-            objEntidad.apaterno = txtAPaterno.Text;
-            objEntidad.amaterno = txtAMaterno.Text;
-            objEntidad.rut = Convert.ToInt32(txtRut.Text);
-            objEntidad.dv = txtDV.Text;
+            if (txtRut.Text.Length == 0 || txtNombre.Text.Length == 0 || txtAPaterno.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar todos los datos del trabajador","Error",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                objEntidad.nombre = txtNombre.Text;
+                objEntidad.apaterno = txtAPaterno.Text;
+                objEntidad.amaterno = txtAMaterno.Text;
+                objEntidad.rut = Convert.ToInt32(txtRut.Text);
+                objEntidad.dv = txtDV.Text;
 
-            objNego.n_insertar(objEntidad);
+                objNego.n_insertar(objEntidad);
 
-            MessageBox.Show("Registro insertado con éxito");
+                MessageBox.Show("Trabajador registrado con éxito", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         void Limpiar()
         {
@@ -71,15 +78,22 @@ namespace RemuneracionesSSA
         }
         void Editar()
         {
-            objEntidad.id = Convert.ToInt32(txtID.Text);
-            objEntidad.nombre = txtNombre.Text;
-            objEntidad.apaterno = txtAPaterno.Text;
-            objEntidad.amaterno = txtAMaterno.Text;
-            objEntidad.rut = Convert.ToInt32(txtRut.Text);
-            objEntidad.dv = txtDV.Text;
-            objNego.n_editar(objEntidad);
+            try
+            {
+                objEntidad.id = Convert.ToInt32(txtID.Text);
+                objEntidad.nombre = txtNombre.Text;
+                objEntidad.apaterno = txtAPaterno.Text;
+                objEntidad.amaterno = txtAMaterno.Text;
+                objEntidad.rut = Convert.ToInt32(txtRut.Text);
+                objEntidad.dv = txtDV.Text;
+                objNego.n_editar(objEntidad);
 
-            MessageBox.Show("Registro editado con éxito");
+                MessageBox.Show("Trabajador modificado con éxito", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Debe seleccionar un trabajador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
         void eliminar()
         {
@@ -99,6 +113,7 @@ namespace RemuneracionesSSA
 
             if (dgvTrabajador.Rows[e.RowIndex].Cells["Modificar"].Selected)
             {
+                btnAgregar.Enabled = false;
                 txtID.Text = dgvTrabajador.Rows[e.RowIndex].Cells["id_trabajador"].Value.ToString();
                 txtNombre.Text = dgvTrabajador.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
                 txtAPaterno.Text = dgvTrabajador.Rows[e.RowIndex].Cells["apaterno"].Value.ToString();
@@ -113,6 +128,7 @@ namespace RemuneracionesSSA
             Editar();
             ListarEmpleado();
             Limpiar();
+            btnAgregar.Enabled = true;
         }
 
         private void txtRut_TextChanged(object sender, EventArgs e)
