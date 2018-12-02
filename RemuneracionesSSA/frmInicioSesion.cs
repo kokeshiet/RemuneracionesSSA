@@ -16,5 +16,21 @@ namespace RemuneracionesSSA
         {
             InitializeComponent();
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            DataTable dtsRetorno = new DataTable();
+            dtsRetorno = CapaDatos.UsuarioCD.loginUsuario(txtUsuario.Text, txtContrasenia.Text);
+            if (dtsRetorno.Rows.Count > 0)
+            {
+                frmMenuPrincipal frmInicio = new frmMenuPrincipal();
+                frmInicio.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario y/o Contraseña incorrecta, intente nuevamente");
+            }
+        }
     }
 }
