@@ -8,6 +8,7 @@ namespace CapaEntidad
 {
     public class ObraAsignadaCE
     {
+        public int id { get; set; }
         public int rut { get; set; }
         public int idtrabajador { get; set; }
         public int idobra { get; set; }

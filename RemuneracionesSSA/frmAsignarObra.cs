@@ -95,7 +95,7 @@ namespace RemuneracionesSSA
 
                 objNegoObraAsig.n_insertar(objEntidadObraAsig);
 
-                MessageBox.Show("Trabajador registrado con éxito", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Asignación registrada con éxito", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

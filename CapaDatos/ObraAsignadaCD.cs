@@ -14,6 +14,17 @@ namespace CapaDatos
     {
         SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconex"].ConnectionString);
 
+        public DataTable d_listado(int rut)
+        {
+            SqlCommand cmd = new SqlCommand("SP_LISTAR_OBRAS_ASIGNADAS", cn);
+            cmd.Parameters.AddWithValue("@RUT", rut);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
         public void d_insertar(ObraAsignadaCE obraAsignada)
         {
             SqlCommand cmd = new SqlCommand("SVC_INS_ASIGNAROBRA", cn);
@@ -29,6 +40,21 @@ namespace CapaDatos
                 cn.Close();
             }
 
+        }
+
+        public void d_editar(ObraAsignadaCE obraAsignada)
+        {
+            SqlCommand cmd = new SqlCommand("SVC_UPD_ACTUALIZAR_OBRA_ASIGNADA", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", obraAsignada.id);
+            cmd.Parameters.AddWithValue("@fechafin", obraAsignada.fechafin);
+
+            if (cn.State == ConnectionState.Open) cn.Close();
+            {
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
         }
     }
 }

@@ -35,13 +35,14 @@
             this.listadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trabajadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.obrasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.btnTrabajador = new System.Windows.Forms.ToolStripButton();
             this.btnObra = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.asignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asignarObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.finalizarObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -93,15 +94,31 @@
             // trabajadoresToolStripMenuItem1
             // 
             this.trabajadoresToolStripMenuItem1.Name = "trabajadoresToolStripMenuItem1";
-            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
             this.trabajadoresToolStripMenuItem1.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem1.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem1_Click);
             // 
             // obrasToolStripMenuItem1
             // 
             this.obrasToolStripMenuItem1.Name = "obrasToolStripMenuItem1";
-            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
             this.obrasToolStripMenuItem1.Text = "Obras";
+            // 
+            // asignacionesToolStripMenuItem
+            // 
+            this.asignacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.asignarObraToolStripMenuItem,
+            this.finalizarObraToolStripMenuItem});
+            this.asignacionesToolStripMenuItem.Name = "asignacionesToolStripMenuItem";
+            this.asignacionesToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
+            this.asignacionesToolStripMenuItem.Text = "Asignaciones";
+            // 
+            // asignarObraToolStripMenuItem
+            // 
+            this.asignarObraToolStripMenuItem.Name = "asignarObraToolStripMenuItem";
+            this.asignarObraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.asignarObraToolStripMenuItem.Text = "Asignar Obra";
+            this.asignarObraToolStripMenuItem.Click += new System.EventHandler(this.asignarObraToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -155,20 +172,12 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 86);
             // 
-            // asignacionesToolStripMenuItem
+            // finalizarObraToolStripMenuItem
             // 
-            this.asignacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.asignarObraToolStripMenuItem});
-            this.asignacionesToolStripMenuItem.Name = "asignacionesToolStripMenuItem";
-            this.asignacionesToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
-            this.asignacionesToolStripMenuItem.Text = "Asignaciones";
-            // 
-            // asignarObraToolStripMenuItem
-            // 
-            this.asignarObraToolStripMenuItem.Name = "asignarObraToolStripMenuItem";
-            this.asignarObraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.asignarObraToolStripMenuItem.Text = "Asignar Obra";
-            this.asignarObraToolStripMenuItem.Click += new System.EventHandler(this.asignarObraToolStripMenuItem_Click);
+            this.finalizarObraToolStripMenuItem.Name = "finalizarObraToolStripMenuItem";
+            this.finalizarObraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.finalizarObraToolStripMenuItem.Text = "Finalizar Obra";
+            this.finalizarObraToolStripMenuItem.Click += new System.EventHandler(this.finalizarObraToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -208,5 +217,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem asignacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignarObraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem finalizarObraToolStripMenuItem;
     }
 }

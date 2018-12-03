@@ -17,5 +17,15 @@ namespace CapaNegocio
         {
             objdato.d_insertar(obraAsignada);
         }
+
+        public DataTable n_listado(int rut)
+        {
+            return objdato.d_listado(rut);
+        }
+        public void n_editar(ObraAsignadaCE obraAsignada)
+        {
+            objdato.d_editar(obraAsignada);
+        }
+
     }
 }
