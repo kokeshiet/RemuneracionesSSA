@@ -44,9 +44,12 @@ namespace CapaDatos
 
         public void d_editar(ObraAsignadaCE obraAsignada)
         {
-            SqlCommand cmd = new SqlCommand("SVC_UPD_ACTUALIZAR_OBRA_ASIGNADA", cn);
+            SqlCommand cmd = new SqlCommand("SVC_UPD_ACTUALIZARFECHAFIN", cn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id", obraAsignada.id);
+            cmd.Parameters.AddWithValue("@idobra", obraAsignada.idobra);
+            cmd.Parameters.AddWithValue("@idtrabajador", obraAsignada.idtrabajador);
+            cmd.Parameters.AddWithValue("@fechainicio", obraAsignada.fechainicio);
+            cmd.Parameters.AddWithValue("@valordia", obraAsignada.valordia);
             cmd.Parameters.AddWithValue("@fechafin", obraAsignada.fechafin);
 
             if (cn.State == ConnectionState.Open) cn.Close();

@@ -37,7 +37,10 @@ namespace RemuneracionesSSA
         private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtID.Text = dgvDatos.Rows[e.RowIndex].Cells["id"].Value.ToString();
+            txtIdTrabajador.Text = dgvDatos.Rows[e.RowIndex].Cells["id_trabajador"].Value.ToString();
+            txtIDobra.Text = dgvDatos.Rows[e.RowIndex].Cells["id_obra"].Value.ToString();
             txtObra.Text = dgvDatos.Rows[e.RowIndex].Cells["nombre1"].Value.ToString();
+            txtValorDia.Text = dgvDatos.Rows[e.RowIndex].Cells["valordia"].Value.ToString();
             dtpFechaInicio.Value = Convert.ToDateTime(dgvDatos.Rows[e.RowIndex].Cells["fechainicio"].Value.ToString());
         }
 
@@ -50,16 +53,18 @@ namespace RemuneracionesSSA
         {
             try
             {
-                objEntidad.id = Convert.ToInt32(txtID.Text);
-                objEntidad.fechafin = dtpFechaFin.Value;
+                objEntidad.idobra = Convert.ToInt32(txtIDobra.Text);
+                objEntidad.idtrabajador = Convert.ToInt32(txtIdTrabajador.Text);
+                objEntidad.valordia = Convert.ToInt32(txtValorDia.Text);
+                objEntidad.fechainicio = Convert.ToDateTime(dtpFechaInicio.Value);
+                objEntidad.fechafin = Convert.ToDateTime(dtpFechaFin.Value);
 
                 objNego.n_editar(objEntidad);
 
                 MessageBox.Show("Obra Finalizada con éxito","Finalizar Obra",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
-            catch (Exception)
+            catch (Exception ex) 
             {
-                MessageBox.Show("Debe seleccionar una Obra", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
