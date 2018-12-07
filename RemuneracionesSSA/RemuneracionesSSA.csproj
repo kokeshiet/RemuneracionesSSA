@@ -66,6 +66,12 @@
     <Compile Include="frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListadoObra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoObra.Designer.cs">
+      <DependentUpon>frmListadoObra.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListadoTrabajador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoObra.resx">
+      <DependentUpon>frmListadoObra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListadoTrabajador.resx">
       <DependentUpon>frmListadoTrabajador.cs</DependentUpon>

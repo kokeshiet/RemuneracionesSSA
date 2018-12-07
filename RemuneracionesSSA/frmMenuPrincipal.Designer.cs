@@ -32,9 +32,12 @@
             this.mantenedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trabajadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trabajadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.obrasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sueldosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignarObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finalizarObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,9 +46,6 @@
             this.btnTrabajador = new System.Windows.Forms.ToolStripButton();
             this.btnObra = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.sueldosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -87,6 +87,17 @@
             this.obrasToolStripMenuItem.Text = "Obras";
             this.obrasToolStripMenuItem.Click += new System.EventHandler(this.obrasToolStripMenuItem_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(138, 6);
+            // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
+            // 
             // listadosToolStripMenuItem
             // 
             this.listadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -109,6 +120,13 @@
             this.obrasToolStripMenuItem1.Name = "obrasToolStripMenuItem1";
             this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.obrasToolStripMenuItem1.Text = "Obras";
+            this.obrasToolStripMenuItem1.Click += new System.EventHandler(this.obrasToolStripMenuItem1_Click);
+            // 
+            // sueldosToolStripMenuItem
+            // 
+            this.sueldosToolStripMenuItem.Name = "sueldosToolStripMenuItem";
+            this.sueldosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sueldosToolStripMenuItem.Text = "Sueldo";
             // 
             // asignacionesToolStripMenuItem
             // 
@@ -122,14 +140,14 @@
             // asignarObraToolStripMenuItem
             // 
             this.asignarObraToolStripMenuItem.Name = "asignarObraToolStripMenuItem";
-            this.asignarObraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.asignarObraToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.asignarObraToolStripMenuItem.Text = "Asignar Obra";
             this.asignarObraToolStripMenuItem.Click += new System.EventHandler(this.asignarObraToolStripMenuItem_Click);
             // 
             // finalizarObraToolStripMenuItem
             // 
             this.finalizarObraToolStripMenuItem.Name = "finalizarObraToolStripMenuItem";
-            this.finalizarObraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.finalizarObraToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.finalizarObraToolStripMenuItem.Text = "Finalizar Obra";
             this.finalizarObraToolStripMenuItem.Click += new System.EventHandler(this.finalizarObraToolStripMenuItem_Click);
             // 
@@ -184,23 +202,6 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 86);
-            // 
-            // sueldosToolStripMenuItem
-            // 
-            this.sueldosToolStripMenuItem.Name = "sueldosToolStripMenuItem";
-            this.sueldosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sueldosToolStripMenuItem.Text = "Sueldo";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
-            // 
-            // usuarioToolStripMenuItem
-            // 
-            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.usuarioToolStripMenuItem.Text = "Usuario";
             // 
             // frmMenuPrincipal
             // 
