@@ -37,5 +37,10 @@ namespace RemuneracionesSSA
         {
             Application.Exit();
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            txtUsuario.CharacterCasing = CharacterCasing.Upper;
+        }
     }
 }
