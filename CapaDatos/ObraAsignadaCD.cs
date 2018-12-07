@@ -25,6 +25,18 @@ namespace CapaDatos
             return dt;
         }
 
+        public DataTable d_listadoXrutYObra(int rut,int idObra)
+        {
+            SqlCommand cmd = new SqlCommand("SVC_QRY_LISTAR_SUELDO_POR_RUT_OBRA", cn);
+            cmd.Parameters.AddWithValue("@RUT", rut);
+            cmd.Parameters.AddWithValue("@IDOBRA", idObra);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
         public DataTable d_mostrarsueldo(int id)
         {
             SqlCommand cmd = new SqlCommand("SVC_QRY_LISTAR_SUELDO", cn);
