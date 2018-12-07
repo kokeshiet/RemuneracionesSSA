@@ -37,12 +37,15 @@
             this.obrasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.asignacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignarObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.finalizarObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.btnTrabajador = new System.Windows.Forms.ToolStripButton();
             this.btnObra = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.finalizarObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sueldosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +66,9 @@
             // 
             this.mantenedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trabajadoresToolStripMenuItem,
-            this.obrasToolStripMenuItem});
+            this.obrasToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.usuarioToolStripMenuItem});
             this.mantenedoresToolStripMenuItem.Name = "mantenedoresToolStripMenuItem";
             this.mantenedoresToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.mantenedoresToolStripMenuItem.Text = "Mantenedores";
@@ -86,7 +91,8 @@
             // 
             this.listadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trabajadoresToolStripMenuItem1,
-            this.obrasToolStripMenuItem1});
+            this.obrasToolStripMenuItem1,
+            this.sueldosToolStripMenuItem});
             this.listadosToolStripMenuItem.Name = "listadosToolStripMenuItem";
             this.listadosToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.listadosToolStripMenuItem.Text = "Listados";
@@ -94,14 +100,14 @@
             // trabajadoresToolStripMenuItem1
             // 
             this.trabajadoresToolStripMenuItem1.Name = "trabajadoresToolStripMenuItem1";
-            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.trabajadoresToolStripMenuItem1.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem1.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem1_Click);
             // 
             // obrasToolStripMenuItem1
             // 
             this.obrasToolStripMenuItem1.Name = "obrasToolStripMenuItem1";
-            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.obrasToolStripMenuItem1.Text = "Obras";
             // 
             // asignacionesToolStripMenuItem
@@ -119,6 +125,13 @@
             this.asignarObraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.asignarObraToolStripMenuItem.Text = "Asignar Obra";
             this.asignarObraToolStripMenuItem.Click += new System.EventHandler(this.asignarObraToolStripMenuItem_Click);
+            // 
+            // finalizarObraToolStripMenuItem
+            // 
+            this.finalizarObraToolStripMenuItem.Name = "finalizarObraToolStripMenuItem";
+            this.finalizarObraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.finalizarObraToolStripMenuItem.Text = "Finalizar Obra";
+            this.finalizarObraToolStripMenuItem.Click += new System.EventHandler(this.finalizarObraToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -172,12 +185,22 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 86);
             // 
-            // finalizarObraToolStripMenuItem
+            // sueldosToolStripMenuItem
             // 
-            this.finalizarObraToolStripMenuItem.Name = "finalizarObraToolStripMenuItem";
-            this.finalizarObraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.finalizarObraToolStripMenuItem.Text = "Finalizar Obra";
-            this.finalizarObraToolStripMenuItem.Click += new System.EventHandler(this.finalizarObraToolStripMenuItem_Click);
+            this.sueldosToolStripMenuItem.Name = "sueldosToolStripMenuItem";
+            this.sueldosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sueldosToolStripMenuItem.Text = "Sueldo";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
             // 
             // frmMenuPrincipal
             // 
@@ -218,5 +241,8 @@
         private System.Windows.Forms.ToolStripMenuItem asignacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignarObraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem finalizarObraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sueldosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
     }
 }
