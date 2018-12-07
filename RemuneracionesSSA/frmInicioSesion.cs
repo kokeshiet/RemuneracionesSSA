@@ -29,7 +29,8 @@ namespace RemuneracionesSSA
             }
             else
             {
-                MessageBox.Show("Usuario y/o Contraseña incorrecta, intente nuevamente");
+                MessageBox.Show("Usuario y/o Contraseña incorrecta, intente nuevamente","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                txtUsuario.Focus();
             }
         }
 
