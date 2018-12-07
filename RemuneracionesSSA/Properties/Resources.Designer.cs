@@ -113,6 +113,16 @@ namespace RemuneracionesSSA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sueldo64x64 {
+            get {
+                object obj = ResourceManager.GetObject("Sueldo64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Trabajado_64x64 {
             get {
                 object obj = ResourceManager.GetObject("Trabajado_64x64", resourceCulture);

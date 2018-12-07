@@ -48,6 +48,8 @@
             this.btnObra = new System.Windows.Forms.ToolStripButton();
             this.btnAsignarObra = new System.Windows.Forms.ToolStripButton();
             this.btnFinalizarObra = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnMostrarSueldo = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -161,7 +163,9 @@
             this.btnObra,
             this.toolStripSeparator1,
             this.btnAsignarObra,
-            this.btnFinalizarObra});
+            this.btnFinalizarObra,
+            this.toolStripSeparator3,
+            this.btnMostrarSueldo});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 86);
@@ -230,6 +234,21 @@
             this.btnFinalizarObra.ToolTipText = "Finalizar Obra";
             this.btnFinalizarObra.Click += new System.EventHandler(this.btnFinalizarObra_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 86);
+            // 
+            // btnMostrarSueldo
+            // 
+            this.btnMostrarSueldo.Image = global::RemuneracionesSSA.Properties.Resources.Sueldo64x64;
+            this.btnMostrarSueldo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnMostrarSueldo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMostrarSueldo.Name = "btnMostrarSueldo";
+            this.btnMostrarSueldo.Size = new System.Drawing.Size(106, 83);
+            this.btnMostrarSueldo.Text = "Sueldo Trabajador";
+            this.btnMostrarSueldo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,5 +293,7 @@
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton btnAsignarObra;
         private System.Windows.Forms.ToolStripButton btnFinalizarObra;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton btnMostrarSueldo;
     }
 }
