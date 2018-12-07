@@ -25,6 +25,17 @@ namespace CapaDatos
             return dt;
         }
 
+        public DataTable d_mostrarsueldo(int id)
+        {
+            SqlCommand cmd = new SqlCommand("SVC_QRY_LISTAR_SUELDO", cn);
+            cmd.Parameters.AddWithValue("@ID", id);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
         public void d_insertar(ObraAsignadaCE obraAsignada)
         {
             SqlCommand cmd = new SqlCommand("SVC_INS_ASIGNAROBRA", cn);
@@ -49,8 +60,7 @@ namespace CapaDatos
             cmd.Parameters.AddWithValue("@idobra", obraAsignada.idobra);
             cmd.Parameters.AddWithValue("@idtrabajador", obraAsignada.idtrabajador);
             cmd.Parameters.AddWithValue("@fechainicio", obraAsignada.fechainicio);
-            cmd.Parameters.AddWithValue("@valordia", obraAsignada.valordia);
-            cmd.Parameters.AddWithValue("@fechafin", obraAsignada.fechafin);
+            cmd.Parameters.AddWithValue("@fechafinobra", obraAsignada.fechafin);
 
             if (cn.State == ConnectionState.Open) cn.Close();
             {

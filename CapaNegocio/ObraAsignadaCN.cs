@@ -27,5 +27,10 @@ namespace CapaNegocio
             objdato.d_editar(obraAsignada);
         }
 
+        public DataTable n_mostrarsueldo(int id)
+        {
+            return objdato.d_mostrarsueldo(id);
+        }
+
     }
 }

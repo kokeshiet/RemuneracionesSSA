@@ -31,7 +31,14 @@ namespace RemuneracionesSSA
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            ListarObrasAsignadas();
+            if (txtRut.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar un Rut a buscar","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                ListarObrasAsignadas();
+            }
         }
 
         private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,7 +47,6 @@ namespace RemuneracionesSSA
             txtIdTrabajador.Text = dgvDatos.Rows[e.RowIndex].Cells["id_trabajador"].Value.ToString();
             txtIDobra.Text = dgvDatos.Rows[e.RowIndex].Cells["id_obra"].Value.ToString();
             txtObra.Text = dgvDatos.Rows[e.RowIndex].Cells["nombre1"].Value.ToString();
-            txtValorDia.Text = dgvDatos.Rows[e.RowIndex].Cells["valordia"].Value.ToString();
             dtpFechaInicio.Value = Convert.ToDateTime(dgvDatos.Rows[e.RowIndex].Cells["fechainicio"].Value.ToString());
         }
 
@@ -48,6 +54,16 @@ namespace RemuneracionesSSA
         {
             Editar();
             Limpiar();
+            MostrarSueldo();
+        }
+
+        void MostrarSueldo()
+        {
+            DataTable dt = objNego.n_mostrarsueldo(Convert.ToInt32(txtID.Text));
+            if (dt.Rows.Count > 0)
+            {
+                MessageBox.Show("El sueldo del trabajador por la obra es: $" + dt.Rows[0][0].ToString(),"Calculo del Sueldo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
         }
         void Editar()
         {
@@ -55,9 +71,8 @@ namespace RemuneracionesSSA
             {
                 objEntidad.idobra = Convert.ToInt32(txtIDobra.Text);
                 objEntidad.idtrabajador = Convert.ToInt32(txtIdTrabajador.Text);
-                objEntidad.valordia = Convert.ToInt32(txtValorDia.Text);
-                objEntidad.fechainicio = Convert.ToDateTime(dtpFechaInicio.Value);
-                objEntidad.fechafin = Convert.ToDateTime(dtpFechaFin.Value);
+                objEntidad.fechainicio = dtpFechaInicio.Value;
+                objEntidad.fechafin = dtpFechaFin.Value;
 
                 objNego.n_editar(objEntidad);
 

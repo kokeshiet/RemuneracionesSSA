@@ -47,9 +47,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSueldo = new System.Windows.Forms.TextBox();
             this.txtIDobra = new System.Windows.Forms.TextBox();
-            this.txtValorDia = new System.Windows.Forms.TextBox();
             this.txtIdTrabajador = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.Busqueda.SuspendLayout();
@@ -140,7 +139,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtValorDia);
+            this.groupBox1.Controls.Add(this.txtIdTrabajador);
+            this.groupBox1.Controls.Add(this.txtIDobra);
             this.groupBox1.Controls.Add(this.btnLimpiar);
             this.groupBox1.Controls.Add(this.btnFinalizar);
             this.groupBox1.Controls.Add(this.dtpFechaFin);
@@ -151,9 +151,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(303, 274);
+            this.groupBox1.Location = new System.Drawing.Point(294, 274);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(283, 150);
+            this.groupBox1.Size = new System.Drawing.Size(304, 127);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Obra";
@@ -181,7 +181,7 @@
             // dtpFechaFin
             // 
             this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFin.Location = new System.Drawing.Point(77, 123);
+            this.dtpFechaFin.Location = new System.Drawing.Point(77, 97);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(100, 20);
             this.dtpFechaFin.TabIndex = 13;
@@ -189,7 +189,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 129);
+            this.label6.Location = new System.Drawing.Point(17, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 12;
@@ -199,7 +199,7 @@
             // 
             this.dtpFechaInicio.Enabled = false;
             this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(77, 97);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(77, 71);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(100, 20);
             this.dtpFechaInicio.TabIndex = 11;
@@ -207,7 +207,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 103);
+            this.label5.Location = new System.Drawing.Point(6, 77);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 10;
@@ -247,31 +247,24 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Total a Cancelar";
             // 
-            // textBox2
+            // txtSueldo
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(721, 300);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 10;
+            this.txtSueldo.Enabled = false;
+            this.txtSueldo.Location = new System.Drawing.Point(721, 300);
+            this.txtSueldo.Name = "txtSueldo";
+            this.txtSueldo.Size = new System.Drawing.Size(100, 20);
+            this.txtSueldo.TabIndex = 10;
             // 
             // txtIDobra
             // 
-            this.txtIDobra.Location = new System.Drawing.Point(238, 319);
+            this.txtIDobra.Location = new System.Drawing.Point(369, 45);
             this.txtIDobra.Name = "txtIDobra";
             this.txtIDobra.Size = new System.Drawing.Size(42, 20);
             this.txtIDobra.TabIndex = 11;
             // 
-            // txtValorDia
-            // 
-            this.txtValorDia.Location = new System.Drawing.Point(77, 71);
-            this.txtValorDia.Name = "txtValorDia";
-            this.txtValorDia.Size = new System.Drawing.Size(100, 20);
-            this.txtValorDia.TabIndex = 15;
-            // 
             // txtIdTrabajador
             // 
-            this.txtIdTrabajador.Location = new System.Drawing.Point(238, 348);
+            this.txtIdTrabajador.Location = new System.Drawing.Point(369, 74);
             this.txtIdTrabajador.Name = "txtIdTrabajador";
             this.txtIdTrabajador.Size = new System.Drawing.Size(42, 20);
             this.txtIdTrabajador.TabIndex = 12;
@@ -280,10 +273,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 436);
-            this.Controls.Add(this.txtIdTrabajador);
-            this.Controls.Add(this.txtIDobra);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(904, 405);
+            this.Controls.Add(this.txtSueldo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Busqueda);
@@ -320,10 +311,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSueldo;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.TextBox txtIDobra;
-        private System.Windows.Forms.TextBox txtValorDia;
         private System.Windows.Forms.TextBox txtIdTrabajador;
     }
 }
