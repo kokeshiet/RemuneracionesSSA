@@ -42,10 +42,12 @@
             this.asignarObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finalizarObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.btnTrabajador = new System.Windows.Forms.ToolStripButton();
             this.btnObra = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnAsignarObra = new System.Windows.Forms.ToolStripButton();
+            this.btnFinalizarObra = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -111,21 +113,21 @@
             // trabajadoresToolStripMenuItem1
             // 
             this.trabajadoresToolStripMenuItem1.Name = "trabajadoresToolStripMenuItem1";
-            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
             this.trabajadoresToolStripMenuItem1.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem1.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem1_Click);
             // 
             // obrasToolStripMenuItem1
             // 
             this.obrasToolStripMenuItem1.Name = "obrasToolStripMenuItem1";
-            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
             this.obrasToolStripMenuItem1.Text = "Obras";
             this.obrasToolStripMenuItem1.Click += new System.EventHandler(this.obrasToolStripMenuItem1_Click);
             // 
             // sueldosToolStripMenuItem
             // 
             this.sueldosToolStripMenuItem.Name = "sueldosToolStripMenuItem";
-            this.sueldosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sueldosToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.sueldosToolStripMenuItem.Text = "Sueldo";
             // 
             // asignacionesToolStripMenuItem
@@ -157,12 +159,19 @@
             this.btnSalir,
             this.btnTrabajador,
             this.btnObra,
-            this.toolStripSeparator1});
+            this.toolStripSeparator1,
+            this.btnAsignarObra,
+            this.btnFinalizarObra});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 86);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 86);
             // 
             // btnSalir
             // 
@@ -198,10 +207,28 @@
             this.btnObra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnObra.Click += new System.EventHandler(this.btnObra_Click);
             // 
-            // toolStripSeparator1
+            // btnAsignarObra
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 86);
+            this.btnAsignarObra.Image = global::RemuneracionesSSA.Properties.Resources.AsignarObra1_64x64;
+            this.btnAsignarObra.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnAsignarObra.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAsignarObra.Name = "btnAsignarObra";
+            this.btnAsignarObra.Size = new System.Drawing.Size(80, 83);
+            this.btnAsignarObra.Text = "Asignar Obra";
+            this.btnAsignarObra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAsignarObra.Click += new System.EventHandler(this.btnAsignarObra_Click);
+            // 
+            // btnFinalizarObra
+            // 
+            this.btnFinalizarObra.Image = global::RemuneracionesSSA.Properties.Resources.FinalizarObra64x64;
+            this.btnFinalizarObra.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnFinalizarObra.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnFinalizarObra.Name = "btnFinalizarObra";
+            this.btnFinalizarObra.Size = new System.Drawing.Size(83, 83);
+            this.btnFinalizarObra.Text = "Finalizar Obra";
+            this.btnFinalizarObra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnFinalizarObra.ToolTipText = "Finalizar Obra";
+            this.btnFinalizarObra.Click += new System.EventHandler(this.btnFinalizarObra_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -245,5 +272,7 @@
         private System.Windows.Forms.ToolStripMenuItem sueldosToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton btnAsignarObra;
+        private System.Windows.Forms.ToolStripButton btnFinalizarObra;
     }
 }

@@ -174,5 +174,11 @@
   <ItemGroup>
     <None Include="Resources\Trabajado_64x64.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FinalizarObra64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AsignarObra1_64x64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -79,5 +79,16 @@ namespace RemuneracionesSSA
             listadoObra.StartPosition = FormStartPosition.CenterParent;
             listadoObra.Show();
         }
+
+        private void btnAsignarObra_Click(object sender, EventArgs e)
+        {
+            asignarObraToolStripMenuItem_Click(sender, e);
+
+        }
+
+        private void btnFinalizarObra_Click(object sender, EventArgs e)
+        {
+            finalizarObraToolStripMenuItem_Click(sender, e);
+        }
     }
 }
