@@ -65,6 +65,7 @@ namespace RemuneracionesSSA
             }
             catch (Exception ex) 
             {
+                MessageBox.Show("Error: " + ex, "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
