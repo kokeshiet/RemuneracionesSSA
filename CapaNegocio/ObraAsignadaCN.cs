@@ -32,5 +32,9 @@ namespace CapaNegocio
             return objdato.d_mostrarsueldo(id);
         }
 
+        public DataTable n_listadoXrutYObra(int rut, int idObra)
+        {
+            return objdato.d_listadoXrutYObra(rut, idObra);
+        }
     }
 }
