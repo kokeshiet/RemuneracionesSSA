@@ -42,10 +42,10 @@
             this.asignarObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finalizarObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.btnTrabajador = new System.Windows.Forms.ToolStripButton();
             this.btnObra = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAsignarObra = new System.Windows.Forms.ToolStripButton();
             this.btnFinalizarObra = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -115,22 +115,23 @@
             // trabajadoresToolStripMenuItem1
             // 
             this.trabajadoresToolStripMenuItem1.Name = "trabajadoresToolStripMenuItem1";
-            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.trabajadoresToolStripMenuItem1.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem1.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem1_Click);
             // 
             // obrasToolStripMenuItem1
             // 
             this.obrasToolStripMenuItem1.Name = "obrasToolStripMenuItem1";
-            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.obrasToolStripMenuItem1.Text = "Obras";
             this.obrasToolStripMenuItem1.Click += new System.EventHandler(this.obrasToolStripMenuItem1_Click);
             // 
             // sueldosToolStripMenuItem
             // 
             this.sueldosToolStripMenuItem.Name = "sueldosToolStripMenuItem";
-            this.sueldosToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.sueldosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sueldosToolStripMenuItem.Text = "Sueldo";
+            this.sueldosToolStripMenuItem.Click += new System.EventHandler(this.sueldosToolStripMenuItem_Click);
             // 
             // asignacionesToolStripMenuItem
             // 
@@ -172,11 +173,6 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 86);
-            // 
             // btnSalir
             // 
             this.btnSalir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -210,6 +206,11 @@
             this.btnObra.Text = "Obra";
             this.btnObra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnObra.Click += new System.EventHandler(this.btnObra_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 86);
             // 
             // btnAsignarObra
             // 
@@ -248,6 +249,7 @@
             this.btnMostrarSueldo.Size = new System.Drawing.Size(106, 83);
             this.btnMostrarSueldo.Text = "Sueldo Trabajador";
             this.btnMostrarSueldo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMostrarSueldo.Click += new System.EventHandler(this.btnMostrarSueldo_Click);
             // 
             // frmMenuPrincipal
             // 

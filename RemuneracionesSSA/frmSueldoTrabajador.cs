@@ -26,12 +26,19 @@ namespace RemuneracionesSSA
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            if (txtRut.Text.Length == 0 || cbObra.SelectedIndex == 0)
+            {
+                MessageBox.Show("Debe ingresar un rut y seleccionar una obra", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                ListaObra();
+            }
         }
 
         void ListaObra()
         {
-            DataTable dt = objNegoObraAsig.n_listadoXrutYObra(Convert.ToInt32(txtRut.Text));
+            DataTable dt = objNegoObraAsig.n_listadoXrutYObra(Convert.ToInt32(txtRut.Text),cbObra.SelectedIndex);
             if (dt.Rows.Count > 0)
             {
                 txtNombre.Text = dt.Rows[0][0].ToString();

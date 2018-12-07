@@ -85,6 +85,7 @@
             // txtRut
             // 
             this.txtRut.Location = new System.Drawing.Point(42, 19);
+            this.txtRut.MaxLength = 8;
             this.txtRut.Name = "txtRut";
             this.txtRut.Size = new System.Drawing.Size(100, 20);
             this.txtRut.TabIndex = 1;
@@ -233,6 +234,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(129, 19);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(129, 20);
@@ -240,6 +242,7 @@
             // 
             // txtApaterno
             // 
+            this.txtApaterno.Enabled = false;
             this.txtApaterno.Location = new System.Drawing.Point(129, 45);
             this.txtApaterno.Name = "txtApaterno";
             this.txtApaterno.Size = new System.Drawing.Size(129, 20);
@@ -247,6 +250,7 @@
             // 
             // txtAmaterno
             // 
+            this.txtAmaterno.Enabled = false;
             this.txtAmaterno.Location = new System.Drawing.Point(129, 71);
             this.txtAmaterno.Name = "txtAmaterno";
             this.txtAmaterno.Size = new System.Drawing.Size(129, 20);
@@ -254,6 +258,7 @@
             // 
             // dtpInicioObra
             // 
+            this.dtpInicioObra.Enabled = false;
             this.dtpInicioObra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpInicioObra.Location = new System.Drawing.Point(129, 97);
             this.dtpInicioObra.Name = "dtpInicioObra";
@@ -262,6 +267,7 @@
             // 
             // dtpFinObra
             // 
+            this.dtpFinObra.Enabled = false;
             this.dtpFinObra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFinObra.Location = new System.Drawing.Point(129, 123);
             this.dtpFinObra.Name = "dtpFinObra";
@@ -270,6 +276,7 @@
             // 
             // txtValorDia
             // 
+            this.txtValorDia.Enabled = false;
             this.txtValorDia.Location = new System.Drawing.Point(129, 149);
             this.txtValorDia.Name = "txtValorDia";
             this.txtValorDia.Size = new System.Drawing.Size(58, 20);
@@ -277,6 +284,7 @@
             // 
             // txtDiasTrabajados
             // 
+            this.txtDiasTrabajados.Enabled = false;
             this.txtDiasTrabajados.Location = new System.Drawing.Point(129, 175);
             this.txtDiasTrabajados.Name = "txtDiasTrabajados";
             this.txtDiasTrabajados.Size = new System.Drawing.Size(25, 20);
@@ -284,6 +292,7 @@
             // 
             // txtSueldo
             // 
+            this.txtSueldo.Enabled = false;
             this.txtSueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSueldo.ForeColor = System.Drawing.Color.Red;
             this.txtSueldo.Location = new System.Drawing.Point(129, 201);

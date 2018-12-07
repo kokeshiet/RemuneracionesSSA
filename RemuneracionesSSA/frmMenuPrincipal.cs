@@ -90,5 +90,26 @@ namespace RemuneracionesSSA
         {
             finalizarObraToolStripMenuItem_Click(sender, e);
         }
+
+        private void sueldosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSueldoTrabajador sueldoTrabajador = new frmSueldoTrabajador();
+            sueldoTrabajador.MdiParent = this;
+            sueldoTrabajador.StartPosition = FormStartPosition.CenterParent;
+            sueldoTrabajador.Show();
+        }
+
+        private void btnMostrarSueldo_Click(object sender, EventArgs e)
+        {
+            sueldosToolStripMenuItem_Click(sender, e);
+        }
+
+        private void sueldoTrabajadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSueldoTrabajador sueldoTrabajador = new frmSueldoTrabajador();
+            sueldoTrabajador.MdiParent = this;
+            sueldoTrabajador.StartPosition = FormStartPosition.CenterParent;
+            sueldoTrabajador.Show();
+        }
     }
 }
