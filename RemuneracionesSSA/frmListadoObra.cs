@@ -32,5 +32,16 @@ namespace RemuneracionesSSA
             DataTable dt = objNego.n_listado();
             dgvListadoObras.DataSource = dt;
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        void Limpiar()
+        {
+            DataTable dt = (DataTable)dgvListadoObras.DataSource;
+            dt.Clear();
+        }
     }
 }
