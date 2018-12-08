@@ -45,7 +45,7 @@ namespace RemuneracionesSSA
         {
             if (txtRut.Text.Length == 0 || txtNombre.Text.Length == 0 || txtAPaterno.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar todos los datos del trabajador","Error",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                MessageBox.Show("Debe ingresar todos los datos del trabajador","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
@@ -142,6 +142,27 @@ namespace RemuneracionesSSA
         private void frmTrabajador_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            txtNombre.CharacterCasing = CharacterCasing.Upper;
+        }
+
+        private void txtAPaterno_TextChanged(object sender, EventArgs e)
+        {
+            txtAPaterno.CharacterCasing = CharacterCasing.Upper;
+        }
+
+        private void txtAMaterno_TextChanged(object sender, EventArgs e)
+        {
+            txtAMaterno.CharacterCasing = CharacterCasing.Upper;
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+            ListarEmpleado();
         }
     }
 }

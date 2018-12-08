@@ -46,6 +46,7 @@
             this.dgvTrabajador = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Modificar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrabajador)).BeginInit();
             this.SuspendLayout();
@@ -85,6 +86,7 @@
             this.txtAMaterno.Name = "txtAMaterno";
             this.txtAMaterno.Size = new System.Drawing.Size(144, 20);
             this.txtAMaterno.TabIndex = 12;
+            this.txtAMaterno.TextChanged += new System.EventHandler(this.txtAMaterno_TextChanged);
             // 
             // txtAPaterno
             // 
@@ -92,6 +94,7 @@
             this.txtAPaterno.Name = "txtAPaterno";
             this.txtAPaterno.Size = new System.Drawing.Size(144, 20);
             this.txtAPaterno.TabIndex = 11;
+            this.txtAPaterno.TextChanged += new System.EventHandler(this.txtAPaterno_TextChanged);
             // 
             // txtRut
             // 
@@ -108,6 +111,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(144, 20);
             this.txtNombre.TabIndex = 10;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtID
             // 
@@ -218,11 +222,22 @@
             this.Modificar.Name = "Modificar";
             this.Modificar.Width = 56;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(310, 126);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 4;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmTrabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 306);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.dgvTrabajador);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -257,5 +272,6 @@
         private System.Windows.Forms.DataGridView dgvTrabajador;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.DataGridViewButtonColumn Modificar;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
