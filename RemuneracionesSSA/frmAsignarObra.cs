@@ -84,7 +84,7 @@ namespace RemuneracionesSSA
         {
             if (txtRut.Text.Length == 0 || txtNombre.Text.Length == 0 || txtApaterno.Text.Length == 0 || txtAmaterno.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar todos los datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Debe ingresar todos los datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
