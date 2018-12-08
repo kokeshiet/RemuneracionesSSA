@@ -111,5 +111,13 @@ namespace RemuneracionesSSA
             sueldoTrabajador.StartPosition = FormStartPosition.CenterParent;
             sueldoTrabajador.Show();
         }
+
+        private void transaccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTransacciones transacciones = new frmTransacciones();
+            transacciones.MdiParent = this;
+            transacciones.StartPosition = FormStartPosition.CenterParent;
+            transacciones.Show();
+        }
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="ObraCN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrabajadorCN.cs" />
+    <Compile Include="TransaccionesCN.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
