@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Busqueda = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtIdTrabajador = new System.Windows.Forms.TextBox();
+            this.txtIDobra = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
@@ -46,10 +48,6 @@
             this.txtObra = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtSueldo = new System.Windows.Forms.TextBox();
-            this.txtIDobra = new System.Windows.Forms.TextBox();
-            this.txtIdTrabajador = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.Busqueda.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -158,6 +156,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Obra";
             // 
+            // txtIdTrabajador
+            // 
+            this.txtIdTrabajador.Location = new System.Drawing.Point(369, 74);
+            this.txtIdTrabajador.Name = "txtIdTrabajador";
+            this.txtIdTrabajador.Size = new System.Drawing.Size(42, 20);
+            this.txtIdTrabajador.TabIndex = 12;
+            // 
+            // txtIDobra
+            // 
+            this.txtIDobra.Location = new System.Drawing.Point(369, 45);
+            this.txtIDobra.Name = "txtIDobra";
+            this.txtIDobra.Size = new System.Drawing.Size(42, 20);
+            this.txtIDobra.TabIndex = 11;
+            // 
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(191, 71);
@@ -238,44 +250,11 @@
             this.txtID.Size = new System.Drawing.Size(29, 20);
             this.txtID.TabIndex = 7;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(727, 284);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 13);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Total a Cancelar";
-            // 
-            // txtSueldo
-            // 
-            this.txtSueldo.Enabled = false;
-            this.txtSueldo.Location = new System.Drawing.Point(721, 300);
-            this.txtSueldo.Name = "txtSueldo";
-            this.txtSueldo.Size = new System.Drawing.Size(100, 20);
-            this.txtSueldo.TabIndex = 10;
-            // 
-            // txtIDobra
-            // 
-            this.txtIDobra.Location = new System.Drawing.Point(369, 45);
-            this.txtIDobra.Name = "txtIDobra";
-            this.txtIDobra.Size = new System.Drawing.Size(42, 20);
-            this.txtIDobra.TabIndex = 11;
-            // 
-            // txtIdTrabajador
-            // 
-            this.txtIdTrabajador.Location = new System.Drawing.Point(369, 74);
-            this.txtIdTrabajador.Name = "txtIdTrabajador";
-            this.txtIdTrabajador.Size = new System.Drawing.Size(42, 20);
-            this.txtIdTrabajador.TabIndex = 12;
-            // 
             // frmFinalizarObra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 405);
-            this.Controls.Add(this.txtSueldo);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Busqueda);
             this.Controls.Add(this.dgvDatos);
@@ -287,7 +266,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -310,8 +288,6 @@
         private System.Windows.Forms.TextBox txtObra;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtSueldo;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.TextBox txtIDobra;
         private System.Windows.Forms.TextBox txtIdTrabajador;

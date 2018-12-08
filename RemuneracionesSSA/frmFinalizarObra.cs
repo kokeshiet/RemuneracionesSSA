@@ -62,7 +62,7 @@ namespace RemuneracionesSSA
             DataTable dt = objNego.n_mostrarsueldo(Convert.ToInt32(txtID.Text));
             if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("El sueldo del trabajador por la obra es: $" + dt.Rows[0][0].ToString(),"Calculo del Sueldo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Obra finalizada, el sueldo del trabajador por la obra es: $" + dt.Rows[0][0].ToString(),"Calculo del Sueldo",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
         void Editar()
