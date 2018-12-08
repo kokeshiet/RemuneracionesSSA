@@ -136,8 +136,6 @@
             // 
             // dgvObra
             // 
-            this.dgvObra.AllowUserToAddRows = false;
-            this.dgvObra.AllowUserToOrderColumns = true;
             this.dgvObra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvObra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvObra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
