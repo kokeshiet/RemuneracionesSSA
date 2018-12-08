@@ -68,6 +68,8 @@ namespace RemuneracionesSSA
             txtAPaterno.Text = "";
             txtRut.Text = "";
             txtDV.Text = "";
+            btnAgregar.Enabled = true;
+            btnModificar.Enabled = true;
         }
         
         private void btnEditar_Click(object sender, EventArgs e)
@@ -136,6 +138,14 @@ namespace RemuneracionesSSA
             if (txtRut.Text.Length > 0)
             {
                 txtDV.Text = CapaDatos.Util.calculaDV(Convert.ToInt32(txtRut.Text));
+                DataTable dt = objNego.n_listadoXrut(Convert.ToInt32(txtRut.Text));
+                if (dt.Rows.Count > 0)
+                {
+                    txtNombre.Text = dt.Rows[0][0].ToString();
+                    txtAPaterno.Text = dt.Rows[0][1].ToString();
+                    txtAMaterno.Text = dt.Rows[0][2].ToString();
+                    btnAgregar.Enabled = false;
+                }
             }
         }
 
