@@ -41,6 +41,7 @@ namespace RemuneracionesSSA
             DataTable dt = objNegoObraAsig.n_listadoXrutYObra(Convert.ToInt32(txtRut.Text),cbObra.SelectedIndex);
             if (dt.Rows.Count > 0)
             {
+                /*
                 txtNombre.Text = dt.Rows[0][0].ToString();
                 txtApaterno.Text = dt.Rows[0][1].ToString();
                 txtAmaterno.Text = dt.Rows[0][2].ToString();
@@ -49,6 +50,15 @@ namespace RemuneracionesSSA
                 txtValorDia.Text = dt.Rows[0][5].ToString();
                 txtDiasTrabajados.Text = dt.Rows[0][6].ToString();
                 txtSueldo.Text = dt.Rows[0][7].ToString();
+                */
+                lblNombre.Text = dt.Rows[0][0].ToString();
+                lblApaterno.Text = dt.Rows[0][1].ToString();
+                lblAmaterno.Text = dt.Rows[0][2].ToString();
+                dtpInicioObra.Value = Convert.ToDateTime(dt.Rows[0][3].ToString());
+                dtpFinObra.Value = Convert.ToDateTime(dt.Rows[0][4].ToString());
+                lblValorDia.Text = "$ " + dt.Rows[0][5].ToString();
+                lblDiasTrabajados.Text = dt.Rows[0][6].ToString();
+                lblSueldo.Text = "$ " + dt.Rows[0][7].ToString();
             }
         }
         private void frmSueldoTrabajador_Load(object sender, EventArgs e)
@@ -73,6 +83,26 @@ namespace RemuneracionesSSA
             {
                 txtDV.Text = CapaDatos.Util.calculaDV(Convert.ToInt32(txtRut.Text));
             }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        void Limpiar()
+        {
+            txtRut.Text = "";
+            txtDV.Text = "";
+            cbObra.SelectedIndex = 0;
+            lblNombre.Text = "";
+            lblApaterno.Text = "";
+            lblAmaterno.Text = "";
+            dtpInicioObra.Value = DateTime.Now;
+            dtpFinObra.Value = DateTime.Now;
+            lblValorDia.Text = "$";
+            lblDiasTrabajados.Text = "";
+            lblSueldo.Text = "$";
         }
     }
 }

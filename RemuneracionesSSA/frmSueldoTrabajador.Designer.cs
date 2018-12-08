@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.cbObra = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -38,6 +39,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblSueldo = new System.Windows.Forms.Label();
+            this.lblDiasTrabajados = new System.Windows.Forms.Label();
+            this.lblValorDia = new System.Windows.Forms.Label();
+            this.lblFechaFin = new System.Windows.Forms.Label();
+            this.lblFechaInicio = new System.Windows.Forms.Label();
+            this.lblAmaterno = new System.Windows.Forms.Label();
+            this.lblApaterno = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.txtSueldo = new System.Windows.Forms.TextBox();
             this.txtDiasTrabajados = new System.Windows.Forms.TextBox();
             this.txtValorDia = new System.Windows.Forms.TextBox();
@@ -59,6 +68,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLimpiar);
             this.groupBox1.Controls.Add(this.cbObra);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnBuscar);
@@ -72,6 +82,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Criterios de Busqueda";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(221, 43);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 7;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // cbObra
             // 
@@ -92,7 +112,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(215, 30);
+            this.btnBuscar.Location = new System.Drawing.Point(221, 17);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 6;
@@ -146,6 +166,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblSueldo);
+            this.groupBox2.Controls.Add(this.lblDiasTrabajados);
+            this.groupBox2.Controls.Add(this.lblValorDia);
+            this.groupBox2.Controls.Add(this.lblFechaFin);
+            this.groupBox2.Controls.Add(this.lblFechaInicio);
+            this.groupBox2.Controls.Add(this.lblAmaterno);
+            this.groupBox2.Controls.Add(this.lblApaterno);
+            this.groupBox2.Controls.Add(this.lblNombre);
             this.groupBox2.Controls.Add(this.txtSueldo);
             this.groupBox2.Controls.Add(this.txtDiasTrabajados);
             this.groupBox2.Controls.Add(this.txtValorDia);
@@ -169,12 +197,96 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos";
             // 
+            // lblSueldo
+            // 
+            this.lblSueldo.AutoSize = true;
+            this.lblSueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSueldo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblSueldo.Location = new System.Drawing.Point(126, 204);
+            this.lblSueldo.Name = "lblSueldo";
+            this.lblSueldo.Size = new System.Drawing.Size(24, 20);
+            this.lblSueldo.TabIndex = 25;
+            this.lblSueldo.Text = "$ ";
+            // 
+            // lblDiasTrabajados
+            // 
+            this.lblDiasTrabajados.AutoSize = true;
+            this.lblDiasTrabajados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiasTrabajados.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDiasTrabajados.Location = new System.Drawing.Point(127, 178);
+            this.lblDiasTrabajados.Name = "lblDiasTrabajados";
+            this.lblDiasTrabajados.Size = new System.Drawing.Size(0, 13);
+            this.lblDiasTrabajados.TabIndex = 24;
+            // 
+            // lblValorDia
+            // 
+            this.lblValorDia.AutoSize = true;
+            this.lblValorDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorDia.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblValorDia.Location = new System.Drawing.Point(126, 152);
+            this.lblValorDia.Name = "lblValorDia";
+            this.lblValorDia.Size = new System.Drawing.Size(14, 13);
+            this.lblValorDia.TabIndex = 23;
+            this.lblValorDia.Text = "$";
+            // 
+            // lblFechaFin
+            // 
+            this.lblFechaFin.AutoSize = true;
+            this.lblFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaFin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblFechaFin.Location = new System.Drawing.Point(424, 129);
+            this.lblFechaFin.Name = "lblFechaFin";
+            this.lblFechaFin.Size = new System.Drawing.Size(63, 13);
+            this.lblFechaFin.TabIndex = 22;
+            this.lblFechaFin.Text = "aaaaaaaa";
+            // 
+            // lblFechaInicio
+            // 
+            this.lblFechaInicio.AutoSize = true;
+            this.lblFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaInicio.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblFechaInicio.Location = new System.Drawing.Point(424, 103);
+            this.lblFechaInicio.Name = "lblFechaInicio";
+            this.lblFechaInicio.Size = new System.Drawing.Size(77, 13);
+            this.lblFechaInicio.TabIndex = 21;
+            this.lblFechaInicio.Text = "aaaaaaaaaa";
+            // 
+            // lblAmaterno
+            // 
+            this.lblAmaterno.AutoSize = true;
+            this.lblAmaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmaterno.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblAmaterno.Location = new System.Drawing.Point(127, 74);
+            this.lblAmaterno.Name = "lblAmaterno";
+            this.lblAmaterno.Size = new System.Drawing.Size(0, 13);
+            this.lblAmaterno.TabIndex = 20;
+            // 
+            // lblApaterno
+            // 
+            this.lblApaterno.AutoSize = true;
+            this.lblApaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApaterno.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblApaterno.Location = new System.Drawing.Point(126, 48);
+            this.lblApaterno.Name = "lblApaterno";
+            this.lblApaterno.Size = new System.Drawing.Size(0, 13);
+            this.lblApaterno.TabIndex = 19;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblNombre.Location = new System.Drawing.Point(126, 22);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(0, 13);
+            this.lblNombre.TabIndex = 18;
+            // 
             // txtSueldo
             // 
             this.txtSueldo.Enabled = false;
             this.txtSueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSueldo.ForeColor = System.Drawing.Color.Red;
-            this.txtSueldo.Location = new System.Drawing.Point(129, 201);
+            this.txtSueldo.Location = new System.Drawing.Point(427, 209);
             this.txtSueldo.Name = "txtSueldo";
             this.txtSueldo.Size = new System.Drawing.Size(100, 26);
             this.txtSueldo.TabIndex = 17;
@@ -182,7 +294,7 @@
             // txtDiasTrabajados
             // 
             this.txtDiasTrabajados.Enabled = false;
-            this.txtDiasTrabajados.Location = new System.Drawing.Point(129, 175);
+            this.txtDiasTrabajados.Location = new System.Drawing.Point(427, 178);
             this.txtDiasTrabajados.Name = "txtDiasTrabajados";
             this.txtDiasTrabajados.Size = new System.Drawing.Size(25, 20);
             this.txtDiasTrabajados.TabIndex = 16;
@@ -190,7 +302,7 @@
             // txtValorDia
             // 
             this.txtValorDia.Enabled = false;
-            this.txtValorDia.Location = new System.Drawing.Point(129, 149);
+            this.txtValorDia.Location = new System.Drawing.Point(427, 152);
             this.txtValorDia.Name = "txtValorDia";
             this.txtValorDia.Size = new System.Drawing.Size(58, 20);
             this.txtValorDia.TabIndex = 15;
@@ -216,7 +328,7 @@
             // txtAmaterno
             // 
             this.txtAmaterno.Enabled = false;
-            this.txtAmaterno.Location = new System.Drawing.Point(129, 71);
+            this.txtAmaterno.Location = new System.Drawing.Point(427, 71);
             this.txtAmaterno.Name = "txtAmaterno";
             this.txtAmaterno.Size = new System.Drawing.Size(129, 20);
             this.txtAmaterno.TabIndex = 12;
@@ -224,7 +336,7 @@
             // txtApaterno
             // 
             this.txtApaterno.Enabled = false;
-            this.txtApaterno.Location = new System.Drawing.Point(129, 45);
+            this.txtApaterno.Location = new System.Drawing.Point(427, 45);
             this.txtApaterno.Name = "txtApaterno";
             this.txtApaterno.Size = new System.Drawing.Size(129, 20);
             this.txtApaterno.TabIndex = 11;
@@ -232,7 +344,7 @@
             // txtNombre
             // 
             this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(129, 19);
+            this.txtNombre.Location = new System.Drawing.Point(427, 19);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(129, 20);
             this.txtNombre.TabIndex = 10;
@@ -304,7 +416,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 342);
+            this.ClientSize = new System.Drawing.Size(329, 342);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmSueldoTrabajador";
@@ -345,5 +457,14 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSueldo;
+        private System.Windows.Forms.Label lblDiasTrabajados;
+        private System.Windows.Forms.Label lblValorDia;
+        private System.Windows.Forms.Label lblFechaFin;
+        private System.Windows.Forms.Label lblFechaInicio;
+        private System.Windows.Forms.Label lblAmaterno;
+        private System.Windows.Forms.Label lblApaterno;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
