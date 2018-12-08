@@ -50,8 +50,13 @@
             this.btnFinalizarObra = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnMostrarSueldo = new System.Windows.Forms.ToolStripButton();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tsslUsaurio = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -59,7 +64,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mantenedoresToolStripMenuItem,
             this.listadosToolStripMenuItem,
-            this.asignacionesToolStripMenuItem});
+            this.asignacionesToolStripMenuItem,
+            this.transaccionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -115,21 +121,21 @@
             // trabajadoresToolStripMenuItem1
             // 
             this.trabajadoresToolStripMenuItem1.Name = "trabajadoresToolStripMenuItem1";
-            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
             this.trabajadoresToolStripMenuItem1.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem1.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem1_Click);
             // 
             // obrasToolStripMenuItem1
             // 
             this.obrasToolStripMenuItem1.Name = "obrasToolStripMenuItem1";
-            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
             this.obrasToolStripMenuItem1.Text = "Obras";
             this.obrasToolStripMenuItem1.Click += new System.EventHandler(this.obrasToolStripMenuItem1_Click);
             // 
             // sueldosToolStripMenuItem
             // 
             this.sueldosToolStripMenuItem.Name = "sueldosToolStripMenuItem";
-            this.sueldosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sueldosToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.sueldosToolStripMenuItem.Text = "Sueldo";
             this.sueldosToolStripMenuItem.Click += new System.EventHandler(this.sueldosToolStripMenuItem_Click);
             // 
@@ -251,12 +257,43 @@
             this.btnMostrarSueldo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnMostrarSueldo.Click += new System.EventHandler(this.btnMostrarSueldo_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.tsslUsaurio});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.TabIndex = 4;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tsslUsaurio
+            // 
+            this.tsslUsaurio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsslUsaurio.Name = "tsslUsaurio";
+            this.tsslUsaurio.Size = new System.Drawing.Size(54, 17);
+            this.tsslUsaurio.Text = "Ninguno";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(50, 17);
+            this.toolStripStatusLabel1.Text = "Usuario:";
+            // 
+            // transaccionesToolStripMenuItem
+            // 
+            this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
+            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.transaccionesToolStripMenuItem.Text = "Transacciones";
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
@@ -268,6 +305,8 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,5 +336,9 @@
         private System.Windows.Forms.ToolStripButton btnFinalizarObra;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btnMostrarSueldo;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        public System.Windows.Forms.ToolStripStatusLabel tsslUsaurio;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem;
     }
 }

@@ -25,6 +25,7 @@ namespace RemuneracionesSSA
             {
                 frmMenuPrincipal frmInicio = new frmMenuPrincipal();
                 frmInicio.Show();
+                frmInicio.tsslUsaurio.Text = dtsRetorno.Rows[0][0].ToString().ToUpper();
                 this.Hide();
             }
             else
