@@ -59,7 +59,7 @@ namespace RemuneracionesSSA
         {
             if (txtNombre.Text.Length == 0 || txtDetalle.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar todos los datos de la Obra", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Debe ingresar todos los datos de la Obra", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -68,7 +68,7 @@ namespace RemuneracionesSSA
 
                 objNego.n_insertar(objEntidad);
 
-                MessageBox.Show("Registro insertado con éxito");
+                MessageBox.Show("Registro insertado con éxito","Guardar",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 
@@ -97,12 +97,28 @@ namespace RemuneracionesSSA
 
                 objNego.n_editar(objEntidad);
 
-                MessageBox.Show("Registro editado con éxito");
+                MessageBox.Show("Registro editado con éxito","Editar",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             catch (Exception)
             {
-                MessageBox.Show("Debe seleccionar una Obra", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Debe seleccionar una Obra", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            txtNombre.CharacterCasing = CharacterCasing.Upper;
+        }
+
+        private void txtDetalle_TextChanged(object sender, EventArgs e)
+        {
+            txtDetalle.CharacterCasing = CharacterCasing.Upper;
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+            ListarObra();
         }
     }
 }
