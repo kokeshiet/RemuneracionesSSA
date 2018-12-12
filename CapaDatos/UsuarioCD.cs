@@ -17,7 +17,7 @@ namespace CapaDatos
                 capaEntidad.sqlCE sql = new capaEntidad.sqlCE();
                 sql.addParametro("@login", user);
                 sql.addParametro("@password", pass);
-                dtsRetorno = sql.querySPDataset("SVC_QRY_CONSULTALOGIN");
+                dtsRetorno = sql.querySPDataset("SVC_QRY_CONSULTA_LOGIN");
                 sql.Desconectar();
             }
             catch (Exception ex)

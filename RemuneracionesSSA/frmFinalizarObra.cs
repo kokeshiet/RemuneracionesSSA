@@ -44,8 +44,8 @@ namespace RemuneracionesSSA
         private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtID.Text = dgvDatos.Rows[e.RowIndex].Cells["id"].Value.ToString();
-            txtIdTrabajador.Text = dgvDatos.Rows[e.RowIndex].Cells["id_trabajador"].Value.ToString();
-            txtIDobra.Text = dgvDatos.Rows[e.RowIndex].Cells["id_obra"].Value.ToString();
+            txtIdTrabajador.Text = dgvDatos.Rows[e.RowIndex].Cells["idtrabajador"].Value.ToString();
+            txtIDobra.Text = dgvDatos.Rows[e.RowIndex].Cells["idobra"].Value.ToString();
             txtObra.Text = dgvDatos.Rows[e.RowIndex].Cells["nombre1"].Value.ToString();
             dtpFechaInicio.Value = Convert.ToDateTime(dgvDatos.Rows[e.RowIndex].Cells["fechainicio"].Value.ToString());
         }

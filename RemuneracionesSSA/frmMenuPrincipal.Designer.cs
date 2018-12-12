@@ -52,6 +52,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsaurio = new System.Windows.Forms.ToolStripStatusLabel();
+            this.sueldoPorObraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -82,14 +83,14 @@
             // trabajadoresToolStripMenuItem
             // 
             this.trabajadoresToolStripMenuItem.Name = "trabajadoresToolStripMenuItem";
-            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.trabajadoresToolStripMenuItem.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem_Click);
             // 
             // obrasToolStripMenuItem
             // 
             this.obrasToolStripMenuItem.Name = "obrasToolStripMenuItem";
-            this.obrasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.obrasToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.obrasToolStripMenuItem.Text = "Obras";
             this.obrasToolStripMenuItem.Click += new System.EventHandler(this.obrasToolStripMenuItem_Click);
             // 
@@ -98,7 +99,8 @@
             this.listadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trabajadoresToolStripMenuItem1,
             this.obrasToolStripMenuItem1,
-            this.sueldosToolStripMenuItem});
+            this.sueldosToolStripMenuItem,
+            this.sueldoPorObraToolStripMenuItem});
             this.listadosToolStripMenuItem.Name = "listadosToolStripMenuItem";
             this.listadosToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.listadosToolStripMenuItem.Text = "Listados";
@@ -106,22 +108,22 @@
             // trabajadoresToolStripMenuItem1
             // 
             this.trabajadoresToolStripMenuItem1.Name = "trabajadoresToolStripMenuItem1";
-            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.trabajadoresToolStripMenuItem1.Size = new System.Drawing.Size(190, 22);
             this.trabajadoresToolStripMenuItem1.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem1.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem1_Click);
             // 
             // obrasToolStripMenuItem1
             // 
             this.obrasToolStripMenuItem1.Name = "obrasToolStripMenuItem1";
-            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(190, 22);
             this.obrasToolStripMenuItem1.Text = "Obras";
             this.obrasToolStripMenuItem1.Click += new System.EventHandler(this.obrasToolStripMenuItem1_Click);
             // 
             // sueldosToolStripMenuItem
             // 
             this.sueldosToolStripMenuItem.Name = "sueldosToolStripMenuItem";
-            this.sueldosToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.sueldosToolStripMenuItem.Text = "Sueldo";
+            this.sueldosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.sueldosToolStripMenuItem.Text = "Sueldo Por Trabajador";
             this.sueldosToolStripMenuItem.Click += new System.EventHandler(this.sueldosToolStripMenuItem_Click);
             // 
             // asignacionesToolStripMenuItem
@@ -136,14 +138,14 @@
             // asignarObraToolStripMenuItem
             // 
             this.asignarObraToolStripMenuItem.Name = "asignarObraToolStripMenuItem";
-            this.asignarObraToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.asignarObraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.asignarObraToolStripMenuItem.Text = "Asignar Obra";
             this.asignarObraToolStripMenuItem.Click += new System.EventHandler(this.asignarObraToolStripMenuItem_Click);
             // 
             // finalizarObraToolStripMenuItem
             // 
             this.finalizarObraToolStripMenuItem.Name = "finalizarObraToolStripMenuItem";
-            this.finalizarObraToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.finalizarObraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.finalizarObraToolStripMenuItem.Text = "Finalizar Obra";
             this.finalizarObraToolStripMenuItem.Click += new System.EventHandler(this.finalizarObraToolStripMenuItem_Click);
             // 
@@ -273,6 +275,13 @@
             this.tsslUsaurio.Size = new System.Drawing.Size(54, 17);
             this.tsslUsaurio.Text = "Ninguno";
             // 
+            // sueldoPorObraToolStripMenuItem
+            // 
+            this.sueldoPorObraToolStripMenuItem.Name = "sueldoPorObraToolStripMenuItem";
+            this.sueldoPorObraToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.sueldoPorObraToolStripMenuItem.Text = "Sueldos Por Obra";
+            this.sueldoPorObraToolStripMenuItem.Click += new System.EventHandler(this.sueldoPorObraToolStripMenuItem_Click);
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,5 +333,6 @@
         public System.Windows.Forms.ToolStripStatusLabel tsslUsaurio;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sueldoPorObraToolStripMenuItem;
     }
 }

@@ -41,7 +41,7 @@ namespace RemuneracionesSSA
         {
             if (dgvObra.Rows[e.RowIndex].Cells["Eliminar"].Selected)
             {
-                int eliminar = Convert.ToInt32(dgvObra.Rows[e.RowIndex].Cells["id_obra"].Value.ToString());
+                int eliminar = Convert.ToInt32(dgvObra.Rows[e.RowIndex].Cells["idobra"].Value.ToString());
                 objNego.n_eliminar(eliminar);
                 ListarObra();
             }
@@ -49,7 +49,7 @@ namespace RemuneracionesSSA
             if (dgvObra.Rows[e.RowIndex].Cells["Modificar"].Selected)
             {
                 btnAgregar.Enabled = false;
-                txtID.Text = dgvObra.Rows[e.RowIndex].Cells["id_obra"].Value.ToString();
+                txtID.Text = dgvObra.Rows[e.RowIndex].Cells["idobra"].Value.ToString();
                 txtNombre.Text = dgvObra.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
                 txtDetalle.Text = dgvObra.Rows[e.RowIndex].Cells["detalle"].Value.ToString();
 

@@ -16,7 +16,7 @@ namespace CapaDatos
 
         public DataTable d_listado(int rut)
         {
-            SqlCommand cmd = new SqlCommand("SP_LISTAR_OBRAS_ASIGNADAS", cn);
+            SqlCommand cmd = new SqlCommand("SVC_QRY_LISTAR_OBRA_ASIGNADA_POR_RUT", cn);
             cmd.Parameters.AddWithValue("@RUT", rut);
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -37,9 +37,20 @@ namespace CapaDatos
             return dt;
         }
 
+        public DataTable d_listadoSueldoXobra(int idObra)
+        {
+            SqlCommand cmd = new SqlCommand("SVC_QRY_SUELDO_TOTAL_POR_OBRA", cn);
+            cmd.Parameters.AddWithValue("@IDOBRA", idObra);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
         public DataTable d_mostrarsueldo(int id)
         {
-            SqlCommand cmd = new SqlCommand("SVC_QRY_LISTAR_SUELDO", cn);
+            SqlCommand cmd = new SqlCommand("SVC_QRY_LISTAR_SUELDO_POR_ID", cn);
             cmd.Parameters.AddWithValue("@ID", id);
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -50,7 +61,7 @@ namespace CapaDatos
 
         public void d_insertar(ObraAsignadaCE obraAsignada)
         {
-            SqlCommand cmd = new SqlCommand("SVC_INS_ASIGNAROBRA", cn);
+            SqlCommand cmd = new SqlCommand("SVC_INS_INSERTAR_ASIGNAROBRA", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@rut", obraAsignada.rut);
             cmd.Parameters.AddWithValue("@idobra", obraAsignada.idobra);

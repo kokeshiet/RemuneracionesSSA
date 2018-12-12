@@ -16,7 +16,7 @@ namespace CapaDatos
 
         public DataTable d_listarTransacciones(DateTime fecha)
         {
-            SqlCommand cmd = new SqlCommand("SVC_QRY_LISTAR_TRANSACCIONES", cn);
+            SqlCommand cmd = new SqlCommand("SVC_QRY_LISTAR_TRANSACCIONES_POR_FECHA", cn);
             cmd.Parameters.AddWithValue("@fecha", fecha);
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter da = new SqlDataAdapter(cmd);

@@ -72,7 +72,7 @@ namespace RemuneracionesSSA
             dtObra.Rows.InsertAt(rowDoctores, 0);
             cbObra.DataSource = dtObra;
             cbObra.DisplayMember = "nombre";
-            cbObra.ValueMember = "id_obra";
+            cbObra.ValueMember = "idobra";
             cbObra.SelectedItem = 0;
             cbObra.DropDownStyle = ComboBoxStyle.DropDownList;
         }

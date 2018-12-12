@@ -16,7 +16,7 @@ namespace CapaDatos
 
         public DataTable d_listado()
         {
-            SqlCommand cmd = new SqlCommand("SP_LISTAR_OBRA", cn);
+            SqlCommand cmd = new SqlCommand("SVC_QRY_LISTAR_OBRA_ALL", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -42,9 +42,9 @@ namespace CapaDatos
 
         public void d_eliminar(int id)
         {
-            SqlCommand cmd = new SqlCommand("SVC_INS_ELIMINAR_OBRA", cn);
+            SqlCommand cmd = new SqlCommand("SVC_DLT_ELIMINAR_OBRA", cn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_obra", id);
+            cmd.Parameters.AddWithValue("@idobra", id);
             if (cn.State == ConnectionState.Open) cn.Close();
             {
                 cn.Open();
@@ -57,7 +57,7 @@ namespace CapaDatos
         {
             SqlCommand cmd = new SqlCommand("SVC_UPD_ACTUALIZAR_OBRA", cn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id_obra", obr.id);
+            cmd.Parameters.AddWithValue("@idobra", obr.id);
             cmd.Parameters.AddWithValue("@nombre", obr.nombre);
             cmd.Parameters.AddWithValue("@detalle", obr.detalle);
 

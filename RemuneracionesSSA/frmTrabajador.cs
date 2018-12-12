@@ -108,7 +108,7 @@ namespace RemuneracionesSSA
         {
             if (dgvTrabajador.Rows[e.RowIndex].Cells["Eliminar"].Selected)
             {
-                int eliminar = Convert.ToInt32(dgvTrabajador.Rows[e.RowIndex].Cells["id_trabajador"].Value.ToString());
+                int eliminar = Convert.ToInt32(dgvTrabajador.Rows[e.RowIndex].Cells["idtrabajador"].Value.ToString());
                 objNego.n_eliminar(eliminar);
                 ListarEmpleado();
             }
@@ -116,7 +116,7 @@ namespace RemuneracionesSSA
             if (dgvTrabajador.Rows[e.RowIndex].Cells["Modificar"].Selected)
             {
                 btnAgregar.Enabled = false;
-                txtID.Text = dgvTrabajador.Rows[e.RowIndex].Cells["id_trabajador"].Value.ToString();
+                txtID.Text = dgvTrabajador.Rows[e.RowIndex].Cells["idtrabajador"].Value.ToString();
                 txtNombre.Text = dgvTrabajador.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
                 txtAPaterno.Text = dgvTrabajador.Rows[e.RowIndex].Cells["apaterno"].Value.ToString();
                 txtAMaterno.Text = dgvTrabajador.Rows[e.RowIndex].Cells["amaterno"].Value.ToString();
